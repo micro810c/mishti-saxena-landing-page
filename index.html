@@ -1,0 +1,983 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="description" content="Mishti Saxena — Urban Designer in Sydney, NSW. Find out what your land can really become: a free 20–30 minute chat and a free Quick Zoning Check before you spend on architects, consultants or a DA." />
+<link rel="icon" href="data:," />
+<title>Mishti Saxena — Urban Designer, Sydney | What can your land really become?</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#faf6ef;
+    --bg-alt:#f2ecdf;
+    --surface:#fffdf8;
+    --ink:#1e2a24;
+    --ink-soft:#43534a;
+    --muted:#6b7a6f;
+    --line:#ddd3bf;
+    --green:#2e4b3a;
+    --green-deep:#223a2d;
+    --green-ink:#ffffff;
+    --sand:#e9d3ab;
+    --sand-soft:#f4e8cf;
+    --clay:#a85b28;
+    --clay-soft:#f7e9dc;
+    --focus:#a85b28;
+    --shadow:0 18px 40px rgba(30,42,36,.10);
+    --radius:14px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#141a16;
+      --bg-alt:#1a221c;
+      --surface:#1e2821;
+      --ink:#ece7da;
+      --ink-soft:#c3cbc0;
+      --muted:#9aa79c;
+      --line:#39443b;
+      --green:#7fb08f;
+      --green-deep:#2c4a38;
+      --green-ink:#f2f5ee;
+      --sand:#8a6f3e;
+      --sand-soft:#2e2a1e;
+      --clay:#e09a5f;
+      --clay-soft:#33261a;
+      --focus:#e09a5f;
+      --shadow:0 18px 40px rgba(0,0,0,.35);
+    }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;background:var(--bg);color:var(--ink);
+    font-family:"Libre Franklin",system-ui,-apple-system,"Segoe UI",sans-serif;
+    font-size:17px;line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:"Source Serif 4",Georgia,"Times New Roman",serif;line-height:1.15;margin:0;font-weight:600}
+  p{margin:0}
+  a{color:var(--green)}
+  img{max-width:100%;display:block}
+  section{scroll-margin-top:96px}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+  button,[role="button"],select,summary,input:not([type="checkbox"],[type="radio"]),textarea{font:inherit}
+  button,[role="button"],select,summary,input:not([type="checkbox"],[type="radio"]){min-height:44px}
+  :focus-visible{outline:3px solid var(--focus);outline-offset:2px;border-radius:4px}
+
+  /* ---------- Nav ---------- */
+  .nav{
+    position:sticky;top:0;z-index:50;
+    background:color-mix(in srgb, var(--bg) 92%, transparent);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-in{display:flex;align-items:center;gap:18px;min-height:64px}
+  .brand{font-family:"Source Serif 4",Georgia,serif;font-weight:700;font-size:1.15rem;color:var(--ink);text-decoration:none;white-space:nowrap}
+  .brand span{display:block;font-family:"Libre Franklin",sans-serif;font-weight:500;font-size:.72rem;letter-spacing:.04em;color:var(--muted)}
+  .nav-links{display:none;gap:4px;margin-left:auto}
+  .nav-links a{color:var(--ink-soft);text-decoration:none;font-size:.92rem;font-weight:500;padding:10px 10px;border-radius:8px}
+  .nav-links a:hover{color:var(--ink);background:var(--bg-alt)}
+  .nav-cta{display:none}
+  @media(min-width:960px){.nav-links{display:flex}.nav-cta{display:block;margin-left:8px}.menu-btn{display:none}}
+  .menu-btn{
+    margin-left:auto;background:var(--surface);border:1px solid var(--line);color:var(--ink);
+    border-radius:10px;padding:8px 14px;font-weight:600;cursor:pointer;min-height:44px;
+  }
+  .mobile-menu{display:none;border-top:1px solid var(--line);padding:10px 20px 16px;background:var(--bg)}
+  .mobile-menu.open{display:block}
+  .mobile-menu a{display:block;padding:12px 4px;color:var(--ink);text-decoration:none;font-weight:500;border-bottom:1px solid var(--line)}
+  .mobile-menu a:last-child{border-bottom:none}
+
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    background:var(--green-deep);color:var(--green-ink);text-decoration:none;
+    font-weight:600;font-size:1rem;padding:13px 22px;border-radius:10px;border:1px solid var(--green-deep);
+    cursor:pointer;min-height:48px;text-align:center;
+  }
+  .btn:hover{filter:brightness(1.12)}
+  @media (prefers-color-scheme: dark){.btn{background:var(--green);color:#122016;border-color:var(--green)}}
+  .btn.small{padding:9px 16px;min-height:44px;font-size:.92rem}
+  .btn.ghost{background:transparent;color:var(--green);border-color:var(--green)}
+  @media (prefers-color-scheme: dark){.btn.ghost{color:var(--green)}}
+  .link-arrow{font-weight:600;text-decoration:none}
+  .link-arrow:hover{text-decoration:underline}
+
+  /* ---------- Hero ---------- */
+  .hero{padding:44px 0 0}
+  .hero-grid{display:grid;gap:32px}
+  @media(min-width:920px){.hero-grid{grid-template-columns:1.05fr .95fr;gap:48px;align-items:start}}
+  .hero h1{font-size:clamp(2.3rem,5.2vw,3.6rem);font-weight:700;letter-spacing:-.01em}
+  .hero .lede{margin-top:20px;font-size:1.13rem;color:var(--ink-soft);max-width:34rem}
+  .hero .lede strong{color:var(--ink)}
+  .hero-ctas{margin-top:28px;display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+  .hero-note{margin-top:16px;font-size:.92rem;color:var(--muted);max-width:32rem}
+  .hero-fig{margin:0}
+  .hero-fig img{border-radius:var(--radius);box-shadow:var(--shadow);aspect-ratio:4/3.4;object-fit:cover;width:100%}
+  @media(min-width:920px){.hero-fig img{aspect-ratio:4/4.1}}
+  .hero-fig figcaption{margin-top:10px;font-size:.82rem;color:var(--muted);line-height:1.5}
+  .cred-strip{
+    margin-top:44px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    background:var(--bg-alt);
+  }
+  .cred-in{display:grid;gap:0}
+  @media(min-width:760px){.cred-in{grid-template-columns:repeat(4,1fr)}}
+  .cred{padding:18px 20px;border-bottom:1px solid var(--line)}
+  .cred:last-child{border-bottom:none}
+  @media(min-width:760px){.cred{border-bottom:none;border-right:1px solid var(--line)}.cred:last-child{border-right:none}}
+  .cred b{display:block;font-family:"Source Serif 4",Georgia,serif;font-size:1.02rem;font-weight:600}
+  .cred span{font-size:.86rem;color:var(--muted);line-height:1.45;display:block;margin-top:3px}
+
+  /* ---------- Sections ---------- */
+  .section{padding:72px 0}
+  .section.alt{background:var(--bg-alt)}
+  .section.green{background:var(--green-deep);color:#eef3ec}
+  @media (prefers-color-scheme: dark){.section.green{background:#1d2f24}}
+  .section-head{max-width:44rem}
+  .section-head h2{font-size:clamp(1.8rem,3.6vw,2.5rem)}
+  .section-head .sub{margin-top:14px;color:var(--ink-soft);font-size:1.05rem}
+  .section.green .sub{color:#c9d6c8}
+
+  /* Free check */
+  .free-grid{display:grid;gap:22px;margin-top:36px}
+  @media(min-width:860px){.free-grid{grid-template-columns:1fr 1fr}}
+  .free-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow)}
+  .free-card h3{font-size:1.45rem}
+  .free-tag{display:inline-block;background:var(--sand-soft);color:var(--ink);border:1px solid var(--sand);
+    font-size:.78rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:5px 10px;border-radius:999px;margin-bottom:14px}
+  .free-card p{color:var(--ink-soft);margin-top:10px}
+  .checklist{list-style:none;margin:18px 0 0;padding:0}
+  .checklist li{padding:9px 0 9px 30px;position:relative;border-top:1px dashed var(--line);color:var(--ink-soft)}
+  .checklist li:first-child{border-top:none}
+  .checklist li::before{content:"";position:absolute;left:2px;top:15px;width:14px;height:8px;border-left:3px solid var(--clay);border-bottom:3px solid var(--clay);transform:rotate(-45deg)}
+  .checklist li b{color:var(--ink)}
+  .free-more{margin-top:22px;display:grid;gap:14px}
+  @media(min-width:860px){.free-more{grid-template-columns:1fr 1fr}}
+  .free-mini{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px}
+  .free-mini h3{font-size:1.08rem;font-family:"Libre Franklin",sans-serif;font-weight:700}
+  .free-mini p{color:var(--ink-soft);font-size:.95rem;margin-top:6px}
+  .pathway{margin-top:26px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px 28px}
+  .pathway h3{font-size:1.2rem}
+  .pathway p.intro{color:var(--ink-soft);margin-top:8px;max-width:42rem}
+  .tabs{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+  .tab-btn{background:var(--bg-alt);border:1px solid var(--line);color:var(--ink);border-radius:999px;padding:9px 18px;font-weight:600;cursor:pointer;min-height:44px}
+  .tab-btn[aria-selected="true"]{background:var(--green-deep);color:#fff;border-color:var(--green-deep)}
+  @media (prefers-color-scheme: dark){.tab-btn[aria-selected="true"]{background:var(--green);color:#122016;border-color:var(--green)}}
+  .tab-panel{margin-top:16px;color:var(--ink-soft);max-width:44rem}
+  .tab-panel b{color:var(--ink)}
+  .fineprint{margin-top:14px;font-size:.85rem;color:var(--muted)}
+
+  /* About */
+  .about-grid{display:grid;gap:34px}
+  @media(min-width:920px){.about-grid{grid-template-columns:1.1fr .9fr;gap:52px}}
+  .about-grid .big{font-family:"Source Serif 4",Georgia,serif;font-size:1.35rem;line-height:1.5}
+  .about-grid .body p{color:var(--ink-soft);margin-top:16px}
+  .about-grid .body p:first-child{margin-top:0}
+  .fact-box{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px 28px}
+  .fact-box h3{font-size:1.15rem;margin-bottom:6px}
+  .fact-box dl{margin:0}
+  .fact-box dt{font-weight:700;font-size:.85rem;letter-spacing:.03em;text-transform:uppercase;color:var(--muted);margin-top:18px}
+  .fact-box dt:first-of-type{margin-top:10px}
+  .fact-box dd{margin:4px 0 0;color:var(--ink-soft)}
+  .work-list{margin-top:40px}
+  .work-list h3{font-size:1.35rem}
+  .work-list>p{color:var(--ink-soft);margin-top:10px;max-width:44rem}
+  .work-rows{margin-top:20px;border-top:1px solid var(--line)}
+  .work-row{display:grid;gap:4px;padding:18px 0;border-bottom:1px solid var(--line)}
+  @media(min-width:760px){.work-row{grid-template-columns:220px 1fr;gap:24px}}
+  .work-row b{font-family:"Source Serif 4",Georgia,serif;font-size:1.05rem}
+  .work-row p{color:var(--ink-soft)}
+
+  /* Different */
+  .diff-rows{margin-top:36px;border-top:1px solid var(--line)}
+  .diff-row{display:grid;gap:8px;padding:26px 0;border-bottom:1px solid var(--line)}
+  @media(min-width:760px){.diff-row{grid-template-columns:64px 300px 1fr;gap:28px;align-items:start}}
+  .diff-num{font-family:"Source Serif 4",Georgia,serif;font-size:2rem;font-weight:700;color:var(--clay);line-height:1}
+  .diff-row h3{font-size:1.3rem}
+  .diff-row p{color:var(--ink-soft)}
+
+  /* Steps */
+  .steps{display:grid;gap:22px;margin-top:38px}
+  @media(min-width:860px){.steps{grid-template-columns:repeat(3,1fr)}}
+  .step{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px}
+  .step .n{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;
+    background:var(--green-deep);color:#fff;font-weight:700;font-family:"Source Serif 4",Georgia,serif}
+  @media (prefers-color-scheme: dark){.step .n{background:var(--green);color:#122016}}
+  .step h3{font-size:1.25rem;margin-top:16px}
+  .step p{color:var(--ink-soft);margin-top:8px}
+  .step .free-flag{color:var(--clay);font-weight:700;font-size:.85rem;letter-spacing:.04em;text-transform:uppercase}
+
+  /* Mistakes */
+  .mistakes{margin-top:34px;display:grid;gap:12px}
+  details.mistake{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+  details.mistake summary{
+    cursor:pointer;list-style:none;display:flex;gap:16px;align-items:baseline;
+    padding:18px 22px;font-family:"Source Serif 4",Georgia,serif;font-size:1.12rem;font-weight:600;min-height:44px;
+  }
+  details.mistake summary::-webkit-details-marker{display:none}
+  details.mistake summary .m-num{color:var(--clay);font-weight:700;flex:none}
+  details.mistake summary .m-plus{margin-left:auto;font-family:"Libre Franklin",sans-serif;color:var(--muted);font-size:1.3rem;line-height:1}
+  details.mistake[open ] summary .m-plus{transform:rotate(45deg)}
+  .mistake-body{padding:0 22px 22px 60px;color:var(--ink-soft)}
+  @media(max-width:560px){.mistake-body{padding-left:22px}}
+  .mistake-body .fix{margin-top:10px;background:var(--sand-soft);border-radius:10px;padding:14px 16px;color:var(--ink)}
+  .mistake-body .fix b{color:var(--clay)}
+  @media (prefers-color-scheme: dark){.mistake-body .fix b{color:var(--clay)}}
+
+  /* Services */
+  .svc-rows{margin-top:34px;border-top:1px solid var(--line)}
+  .svc-row{display:grid;gap:4px;padding:20px 0;border-bottom:1px solid var(--line)}
+  @media(min-width:760px){.svc-row{grid-template-columns:320px 1fr;gap:32px}}
+  .svc-row h3{font-size:1.18rem}
+  .svc-row p{color:var(--ink-soft)}
+
+  /* Portfolio */
+  .proj-grid{display:grid;gap:22px;margin-top:36px}
+  @media(min-width:700px){.proj-grid{grid-template-columns:1fr 1fr}}
+  .proj{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+  .proj img{width:100%;aspect-ratio:4/3;object-fit:cover}
+  .proj .p-body{padding:20px 22px 24px}
+  .proj .p-tag{font-size:.76rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--clay)}
+  .proj h3{font-size:1.25rem;margin-top:6px}
+  .proj p{color:var(--ink-soft);margin-top:8px;font-size:.97rem}
+  .skills{margin-top:30px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px 28px}
+  .skills h3{font-size:1.15rem}
+  .skills p{color:var(--ink-soft);margin-top:8px}
+  .testimonial-note{margin-top:22px;border:1px dashed var(--line);border-radius:var(--radius);padding:20px 24px;color:var(--muted);font-size:.95rem;background:transparent}
+
+  /* Bridge + form */
+  .bridge{text-align:center}
+  .bridge h2{font-size:clamp(1.7rem,3.4vw,2.3rem);max-width:38rem;margin:0 auto}
+  .bridge p{color:#c9d6c8;margin:14px auto 0;max-width:36rem}
+  .form-grid{display:grid;gap:36px;margin-top:10px}
+  @media(min-width:920px){.form-grid{grid-template-columns:.9fr 1.1fr;gap:52px}}
+  .book-copy h2{font-size:clamp(1.9rem,3.8vw,2.6rem)}
+  .book-copy p{color:var(--ink-soft);margin-top:14px}
+  .contact-lines{margin-top:24px;display:grid;gap:10px}
+  .contact-lines a{display:inline-flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none;font-weight:600;padding:8px 0;min-height:44px}
+  .contact-lines a:hover{color:var(--green)}
+  .contact-lines .lbl{font-size:.8rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);width:64px;flex:none}
+  .intent-switch{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+  .intent-btn{background:var(--bg-alt);border:1px solid var(--line);color:var(--ink);border-radius:999px;padding:10px 18px;font-weight:600;cursor:pointer;min-height:44px}
+  .intent-btn[aria-pressed="true"]{background:var(--green-deep);color:#fff;border-color:var(--green-deep)}
+  @media (prefers-color-scheme: dark){.intent-btn[aria-pressed="true"]{background:var(--green);color:#122016;border-color:var(--green)}}
+  form.book{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow)}
+  .field{margin-bottom:18px}
+  .field label{display:block;font-weight:600;font-size:.95rem;margin-bottom:7px}
+  .field input,.field textarea{
+    width:100%;border:1px solid var(--line);border-radius:10px;background:var(--bg);
+    color:var(--ink);padding:12px 14px;min-height:48px;
+  }
+  .field textarea{min-height:110px;resize:vertical}
+  .field input:focus,.field textarea:focus{outline:3px solid var(--focus);outline-offset:1px;border-color:transparent}
+  .form-status{display:none;margin-top:16px;background:var(--sand-soft);border:1px solid var(--sand);border-radius:10px;padding:14px 16px;color:var(--ink);font-size:.95rem}
+  .form-status.show{display:block}
+  .form-note{margin-top:14px;font-size:.86rem;color:var(--muted)}
+
+  footer{border-top:1px solid var(--line);background:var(--bg-alt);padding:40px 0 48px}
+  .foot-grid{display:grid;gap:22px}
+  @media(min-width:760px){.foot-grid{grid-template-columns:1.2fr 1fr 1fr}}
+  footer h3{font-size:1.1rem}
+  footer p,footer a{color:var(--ink-soft);font-size:.95rem}
+  footer a{text-decoration:none}
+  footer a:hover{text-decoration:underline}
+  .foot-links{display:grid;gap:8px}
+  .foot-links a{padding:6px 0;min-height:36px;display:inline-flex;align-items:center}
+  .foot-fine{margin-top:28px;padding-top:18px;border-top:1px solid var(--line);font-size:.84rem;color:var(--muted);max-width:56rem}
+
+  /* v2 additions */
+  .hero-guide{margin-top:18px;background:var(--sand-soft);border:1px solid var(--sand);border-radius:10px;padding:14px 16px;font-size:.97rem;color:var(--ink);max-width:34rem}
+  .hero-guide b{color:var(--clay)}
+  .guide-card{margin-top:22px;background:var(--green-deep);color:#eef3ec;border-radius:var(--radius);padding:26px 28px;display:grid;gap:14px}
+  @media(min-width:760px){.guide-card{grid-template-columns:1fr auto;align-items:center;gap:28px}}
+  @media (prefers-color-scheme: dark){.guide-card{background:#1d2f24}}
+  .guide-card h3{font-size:1.3rem;color:#fff}
+  .guide-card p{color:#c9d6c8;margin-top:8px;max-width:38rem}
+  .guide-card .btn{background:var(--sand);border-color:var(--sand);color:#22302a;white-space:nowrap}
+  .guide-card .btn:hover{filter:brightness(1.06)}
+  .started{margin-top:34px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px 28px}
+  .started h3{font-size:1.3rem}
+  .started p{color:var(--ink-soft);margin-top:12px}
+  .started blockquote{margin:16px 0 0;padding:14px 18px;background:var(--sand-soft);border-radius:10px;font-family:"Source Serif 4",Georgia,serif;font-size:1.08rem;line-height:1.55;color:var(--ink)}
+  .diff-lead{margin-top:30px;background:var(--sand-soft);border:1px solid var(--sand);border-radius:var(--radius);padding:24px 28px}
+  .diff-lead h3{font-size:1.25rem}
+  .diff-lead p{color:var(--ink-soft);margin-top:8px}
+  .diff-lead p b{color:var(--ink)}
+  .auth-fig{margin-top:36px}
+  .auth-fig img{border-radius:var(--radius);border:1px solid var(--line);width:100%;background:#fff}
+  .auth-fig figcaption{margin-top:10px;font-size:.84rem;color:var(--muted);line-height:1.5}
+  .auth-cols{display:grid;gap:22px;margin-top:36px}
+  @media(min-width:860px){.auth-cols{grid-template-columns:1fr 1fr}}
+  .auth-box{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px}
+  .auth-box h3{font-size:1.15rem}
+  .auth-box ul{margin:12px 0 0;padding-left:20px;color:var(--ink-soft)}
+  .auth-box li{margin-top:6px}
+  .after-steps{display:grid;gap:18px;margin-top:30px}
+  @media(min-width:860px){.after-steps{grid-template-columns:repeat(3,1fr)}}
+  .after-step{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+  .after-step h3{font-size:1.12rem;font-family:"Libre Franklin",sans-serif;font-weight:700}
+  .after-step p{color:var(--ink-soft);margin-top:6px;font-size:.97rem}
+  .faq-box{margin-top:22px;background:var(--sand-soft);border:1px solid var(--sand);border-radius:var(--radius);padding:24px 26px}
+  .faq-box h3{font-size:1.2rem}
+  .faq-box p{color:var(--ink);margin-top:8px;max-width:44rem}
+  .proj .p-sub-img{margin-top:16px}
+  .proj .p-sub-img img{aspect-ratio:4/3.2;border-radius:8px}
+  .proj .p-sub-img figcaption{font-size:.8rem;color:var(--muted);margin-top:6px;line-height:1.45}
+  .proj-text-head{padding:22px 22px 0}
+  .proj-text-head .precinct-line{font-family:"Source Serif 4",Georgia,serif;font-size:1.6rem;font-weight:700;color:var(--green);line-height:1.2}
+  .proj-text-head .precinct-sub{font-size:.88rem;color:var(--muted);margin-top:4px}
+  .scope-note{margin-top:24px;font-size:.92rem;color:var(--muted);max-width:46rem}
+  .privacy-note{margin-top:14px;background:var(--bg-alt);border:1px solid var(--line);border-radius:10px;padding:14px 16px;font-size:.9rem;color:var(--ink-soft)}
+  .disclaimer-box{margin-top:28px;padding-top:18px;border-top:1px solid var(--line);font-size:.88rem;color:var(--ink-soft);max-width:56rem}
+  .disclaimer-box h3{font-size:1rem;color:var(--ink)}
+  .disclaimer-box p{margin-top:8px;color:var(--ink-soft)}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top">Mishti Saxena <span>Urban Designer · Sydney, NSW</span></a>
+    <nav class="nav-links" aria-label="Page">
+      <a href="#free-check">Free check</a>
+      <a href="#about">About Mish</a>
+      <a href="#mistakes">7 mistakes</a>
+      <a href="#services">Services</a>
+      <a href="#work">Work</a>
+    </nav>
+    <div class="nav-cta"><a class="btn small" href="#book">Book a free chat</a></div>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu">Menu</button>
+  </div>
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Page mobile">
+    <a href="#free-check">Free chat &amp; zoning check</a>
+    <a href="#about">About Mish</a>
+    <a href="#different">Why Mish is different</a>
+    <a href="#how">How it works</a>
+    <a href="#mistakes">7 costly mistakes</a>
+    <a href="#services">Services</a>
+    <a href="#work">Work &amp; portfolio</a>
+    <a href="#book">Book a free chat</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- 1 · HERO -->
+  <div class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <h1>What can your land really become?</h1>
+        <p class="lede">You own land in NSW and you have an idea — a subdivision, a dual occupancy, townhouses, something bigger. Before you spend on design work and consultants, get <strong>an honest first take</strong>: what your zoning actually allows, what could hold your site back, and what your next step should be.</p>
+        <p class="hero-guide"><b>Start with the free guide:</b> “7 costly mistakes landowners make before subdividing or applying for a DA — and how to avoid them.” <a class="link-arrow" href="7-costly-mistakes-guide.pdf" download>Download the free guide (PDF) →</a></p>
+        <div class="hero-ctas">
+          <a class="btn" href="#book" data-intent-link="chat">Book a free 20–30 min chat</a>
+          <a class="link-arrow" href="#book" data-intent-link="zoning">Get a free Quick Zoning Check →</a>
+        </div>
+        <p class="hero-note">Both are free, with no obligation. If your idea is not worth pursuing, you will hear that too — before it costs you anything.</p>
+      </div>
+      <figure class="hero-fig">
+        <img src="asset-02.jpg" alt="Visualisation of the proposed Rosehill station precinct, with residential towers, a tree-lined main street and the station entry in the foreground" />
+        <figcaption>Rosehill–Camellia precinct, Greater Sydney — the proposed Rosehill station, from Mishti's Master of Urbanism studio work at the University of Sydney. Academic project, shown as design work, not a built development.</figcaption>
+      </figure>
+    </div>
+    <div class="cred-strip">
+      <div class="wrap cred-in">
+        <div class="cred"><b>Master of Urbanism (Urban Design)</b><span>University of Sydney — PIA-accredited program</span></div>
+        <div class="cred"><b>Bachelor of Architecture</b><span>Guru Gobind Singh Indraprastha University, Delhi</span></div>
+        <div class="cred"><b>Urban Designer</b><span>Land Specialists Pty Ltd, Sydney — since June 2026</span></div>
+        <div class="cred"><b>NSW planning, every day</b><span>EP&amp;A Act, LEPs, DCPs, SEPPs, Apartment Design Guide, NCC</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2 · THE FREE OFFER -->
+  <section class="section" id="free-check">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Start free: a zoning check and an honest first take</h2>
+        <p class="sub">Good design and good planning shouldn't feel out of reach. So the first step costs nothing — and it is designed to answer the question every landowner actually has: <em>is this worth doing at all?</em></p>
+      </div>
+
+      <div class="free-grid">
+        <article class="free-card">
+          <span class="free-tag">Free</span>
+          <h3>Quick Zoning Check</h3>
+          <p>Send the property address and Mish will look up what the planning controls say about your site:</p>
+          <ul class="checklist">
+            <li><b>Zoning</b> — what your land is zoned, and what that permits</li>
+            <li><b>Height</b> — the maximum building height under the LEP</li>
+            <li><b>Floor space ratio (FSR)</b> — how much floor area the controls allow</li>
+            <li><b>Minimum lot size</b> — the number that decides most subdivisions</li>
+            <li><b>Obvious constraints</b> — flooding, bushfire or heritage flags on the site</li>
+            <li><b>Where relevant</b> — riparian and buffer zones, easements, and whether the site can be serviced</li>
+          </ul>
+        </article>
+
+        <article class="free-card">
+          <span class="free-tag">Free · 20–30 minutes</span>
+          <h3>Initial chat</h3>
+          <p>Tell Mish about your site or idea, and you will get a straight answer — not a sales pitch:</p>
+          <ul class="checklist">
+            <li><b>An honest first take</b> on whether your idea is worth pursuing</li>
+            <li><b>What the land can become</b>, in plain English</li>
+            <li><b>Next steps</b> — which consultants you are likely to need</li>
+            <li><b>Your approval pathway</b> — roughly whether it looks like exempt development, a CDC or a DA</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="guide-card">
+        <div>
+          <h3>The free guide: 7 costly mistakes landowners make before subdividing or applying for a DA — and how to avoid them</h3>
+          <p>The mistakes, in plain English, with what to do instead — free to download, and free to share with family or a business partner who is part of the decision. It is a guide, not a promise: it cannot tell you an outcome, a yield or an approval for your land. That answer comes from the free check on your actual site. You can also <a href="#mistakes" style="color:#e9d3ab;font-weight:600">read the full guide on this page</a>.</p>
+        </div>
+        <a class="btn" href="7-costly-mistakes-guide.pdf" download>Download the free guide (PDF)</a>
+      </div>
+
+      <div class="free-more">
+        <div class="free-mini">
+          <h3>Next-steps guidance — free</h3>
+          <p>Not sure who does what, or in what order? The chat covers which consultants your project is likely to need, and the order that avoids paying twice for the same work.</p>
+        </div>
+        <div class="free-mini">
+          <h3>Design resources — free</h3>
+          <p>Tips and plain-English explainers on NSW planning and subdivision, shared on Instagram and the blog — useful whether or not you ever book a chat.</p>
+        </div>
+      </div>
+
+      <div class="pathway">
+        <h3>Exempt, CDC or DA — what is the difference?</h3>
+        <p class="intro">These three pathways are the first thing most landowners get wrong, and they change your cost and your timeline completely. Here is the short version:</p>
+        <div class="tabs" role="tablist" aria-label="Approval pathways">
+          <button class="tab-btn" role="tab" id="tab-exempt" aria-selected="true" aria-controls="panel-exempt" data-tab="exempt">Exempt development</button>
+          <button class="tab-btn" role="tab" id="tab-cdc" aria-selected="false" aria-controls="panel-cdc" data-tab="cdc">CDC</button>
+          <button class="tab-btn" role="tab" id="tab-da" aria-selected="false" aria-controls="panel-da" data-tab="da">DA</button>
+        </div>
+        <div class="tab-panel" role="tabpanel" id="panel-exempt" aria-labelledby="tab-exempt">
+          <p><b>Exempt development</b> is small, low-impact work that meets a strict set of standards in state policy — things like some decks, fences and minor renovations. If your project genuinely fits, <b>no approval is needed at all</b>. The catch: the standards are exact, and “close enough” does not count.</p>
+        </div>
+        <div class="tab-panel" role="tabpanel" id="panel-cdc" aria-labelledby="tab-cdc" hidden>
+          <p><b>A Complying Development Certificate (CDC)</b> is a fast-track approval for work that meets predetermined controls — many houses, dual occupancies and some subdivisions can qualify. A council or private certifier checks it against the rules rather than judging it on merit, so it is usually <b>faster than a DA — if your site and design actually comply</b>.</p>
+        </div>
+        <div class="tab-panel" role="tabpanel" id="panel-da" aria-labelledby="tab-da" hidden>
+          <p><b>A Development Application (DA)</b> goes to council for a merit assessment. It is the pathway for anything that does not fit exempt or CDC rules, or that needs flexibility — for example, a variation to a control argued through a Clause 4.6 request. It takes longer, and the quality of the supporting work — the Statement of Environmental Effects, the design rationale — matters a great deal.</p>
+        </div>
+        <p class="fineprint">General information only, to help you understand the system. Which pathway applies to your property depends on your site and your proposal — that is exactly what the free zoning check and chat are for.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 · WHO SHE IS -->
+  <section class="section alt" id="about">
+    <div class="wrap">
+      <div class="about-grid">
+        <div class="body">
+          <h2 style="font-size:clamp(1.8rem,3.6vw,2.5rem)">Hi, I'm Mish.</h2>
+          <p class="big" style="margin-top:18px">I'm an urban designer based in Sydney, working across planning, subdivision and built-form design in NSW.</p>
+          <p>I hold a Bachelor of Architecture (Guru Gobind Singh Indraprastha University, Delhi) and a Master of Urbanism (Urban Design) from the University of Sydney, and day to day I work on everything from rural subdivisions and multi-dwelling housing to mixed-use towers and co-living projects.</p>
+          <p>My job is to help people understand what their land can become, and to get a good idea through council with as little friction as possible. I believe good design and good planning shouldn't feel out of reach.</p>
+          <p>In my own words, I am “deeply interested in designing cities and the broader stories that they tell… making meaningful, resilient, and place-sensitive urban areas that improve the community life and their built world.”</p>
+          <p>Because I hold a Bachelor of Architecture and a Master of Urbanism (Urban Design), I understand how planning controls shape what actually gets built — and I use graphics, 3D modelling and GIS to test those controls and explain them clearly.</p>
+        </div>
+        <aside class="fact-box" aria-label="Qualifications and background">
+          <h3>Background, in brief</h3>
+          <dl>
+            <dt>Qualifications</dt>
+            <dd>Master of Urbanism (Urban Design), University of Sydney — PIA-accredited program; High Distinction in Urban Data and Science of Cities</dd>
+            <dd style="margin-top:6px">Bachelor of Architecture, Guru Gobind Singh Indraprastha University, Delhi</dd>
+            <dd style="margin-top:6px">Eligible for Graduate membership, Planning Institute of Australia</dd>
+            <dt>Master's coursework &amp; research</dt>
+            <dd>Coursework: Urban Morphology, Public Space Design, Sustainable Urbanism, Infrastructure and Mobility. Research focus: community-based design, heritage, and socio-spatial narratives</dd>
+            <dt>Master's thesis</dt>
+            <dd>Strategic planning framework for the Rosehill–Camellia transit precinct in GPOP — planning for 4,200 homes and 6,500 jobs</dd>
+            <dt>Current role</dt>
+            <dd>Urban Designer at Land Specialists Pty Ltd, Sydney (June 2026 – present), working with the NSW planning system every day</dd>
+            <dt>Tools of the trade</dt>
+            <dd>QGIS / ArcGIS, AutoCAD, Revit, SketchUp, Lumion, Enscape, V-Ray, Adobe Suite (Photoshop, Illustrator, InDesign) and Python — including GIS-to-BIM workflows and solar and overshadowing analysis</dd>
+          </dl>
+        </aside>
+      </div>
+
+      <div class="started">
+        <h3>How we have started</h3>
+        <p>Mish started in Delhi, completing her Bachelor of Architecture at Guru Gobind Singh Indraprastha University in March 2023 and working as an Architectural Assistant at Creative Group, New Delhi, on large-scale infrastructure and airport projects. She then moved to Sydney for her Master of Urbanism (Urban Design) at the University of Sydney, completed in July 2025, and now works as an Urban Designer at Land Specialists. The free first take comes from the same belief she started with: good design and good planning shouldn't feel out of reach.</p>
+        <blockquote>“Deeply interested in designing cities and the broader stories that they tell… making meaningful, resilient, and place-sensitive urban areas that improve the community life and their built world.”</blockquote>
+      </div>
+
+      <figure class="auth-fig">
+        <img src="asset-04.jpg" alt="Rosehill–Camellia structure plan diagrams showing accessibility, land use and the design outcome structure plan for the precinct" loading="lazy" />
+        <figcaption>The Rosehill–Camellia structure plan — accessibility, land use and design outcome — from Mishti's Master of Urbanism studio work at the University of Sydney. Academic work. This is the kind of plan that sits behind every honest answer about what a precinct — or a single site — can become.</figcaption>
+      </figure>
+
+      <div class="work-list">
+        <h3>The work, day to day</h3>
+        <p>Recent and current work at Land Specialists — the same kind of questions NSW landowners bring to the free chat:</p>
+        <div class="work-rows">
+          <div class="work-row"><b>State Significant Development tower, NSW Central Coast</b><p>Urban design rationale and assessment for a mixed-use tower on a 5,608 sqm site at FSR 4.3 — approximately 24,100 sqm of gross floor area — covering built form, podium and street wall, through-site links and solar access. She tested three built-form options with comparative FSR, GFA, floor-plate and dwelling-yield tables, and took part in the council Design Advisory Panel workshop, translating panel feedback into design revisions.</p></div>
+          <div class="work-row"><b>Clause 4.6 arguments, Wallsend</b><p>Building the case for variations to lot width and minimum lot size controls at 46 Cowper Street, Wallsend, from precedent approvals, determinations and DCP controls.</p></div>
+          <div class="work-row"><b>Six-storey co-living development, Wallsend</b><p>Coordinating the project after its pre-DA meeting — working to bring the FSR under the LEP maximum of 2.2:1, preparing the co-living Plan of Management, and coordinating consultants and council feedback.</p></div>
+          <div class="work-row"><b>Statements of Environmental Effects</b><p>Writing SEEs for a detached dual occupancy on partly flood-affected land at Ourimbah, and for a split-zoned (RU2 / R2) subdivision at Cessnock.</p></div>
+          <div class="work-row"><b>Site selection across a whole LGA</b><p>Running a site selection study across an entire local government area — permissibility, servicing, access and bushfire checked site by site, using GIS to shortlist.</p></div>
+          <div class="work-row"><b>The person consultants call</b><p>Primary point of contact for surveyors, civil engineers, bushfire and flood consultants, architects and landscape architects across concurrent live projects — including preparing a Construction Certificate RFI response — alongside council, client and consultant liaison and Design Advisory Panel workshops.</p></div>
+        </div>
+      </div>
+
+      <div class="auth-cols">
+        <div class="auth-box">
+          <h3>Planning skills behind the check</h3>
+          <ul>
+            <li>Planning proposals, and State Significant Development (SSD) and SEARs work</li>
+            <li>Envelope testing against planning controls</li>
+            <li>Podium and street wall, through-site links and public domain</li>
+            <li>Precedent and case-law research</li>
+            <li>Structure plans and masterplans</li>
+            <li>DCP-style design guidelines</li>
+          </ul>
+        </div>
+        <div class="auth-box">
+          <h3>Constraints she checks for</h3>
+          <ul>
+            <li>Heritage items and Heritage Conservation Areas</li>
+            <li>Bushfire — assessed under Planning for Bush Fire Protection (PBP) 2019</li>
+            <li>Flooding</li>
+            <li>Riparian and buffer zones</li>
+            <li>Easements</li>
+            <li>Servicing</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3a · WHY DIFFERENT -->
+  <section class="section" id="different">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Why Mish is different</h2>
+        <p class="sub">Most planners talk planning. Most designers talk design. A landowner needs someone who can hold both at once — and who will tell you the truth before you spend, not after.</p>
+      </div>
+      <div class="diff-lead">
+        <h3>One combination you won't find in every planning office</h3>
+        <p>It is not one skill — it is the combination: <b>a Bachelor of Architecture, a PIA-accredited Master of Urbanism (Urban Design), daily work inside the NSW planning system, and real SSD and Clause 4.6 experience</b> — all in the one person who takes your first call. A competitor can copy a service list. They cannot copy that combination.</p>
+      </div>
+      <div class="diff-rows">
+        <div class="diff-row">
+          <div class="diff-num">1</div>
+          <h3>Trained in both architecture and planning</h3>
+          <p>Mish holds a Bachelor of Architecture and a Master of Urbanism (Urban Design). So she reads a set of drawings and a set of planning controls with the same eyes — she understands how controls shape what actually gets built, not just what looks good on paper.</p>
+        </div>
+        <div class="diff-row">
+          <div class="diff-num">2</div>
+          <h3>Planning first, design second</h3>
+          <p>The check comes before the sketch: zoning, LEP, DCP and SEPP controls, and constraints like flooding, bushfire and heritage — first. That order matters, because money spent designing something the controls will never allow is money that does not come back.</p>
+        </div>
+        <div class="diff-row">
+          <div class="diff-num">3</div>
+          <h3>An honest first take, free</h3>
+          <p>In a free 20–30 minute chat, Mish will tell you whether your idea is worth pursuing — including when the answer is no. That is the opposite of a vendor who needs the fee first and finds the problems later.</p>
+        </div>
+        <div class="diff-row">
+          <div class="diff-num">4</div>
+          <h3>Plain English, not planning jargon</h3>
+          <p>Planning research and briefing notes written up so a landowner can actually use them: what is permitted, what is holding the site back, and what to do next. The goal is that you finish the conversation thinking, “Now I finally understand what my land can become.”</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 · HOW IT WORKS -->
+  <section class="section alt" id="how">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>How it works</h2>
+        <p class="sub">Three steps, in the order that protects your money: understand the land first, then test what it can become, then design and lodge.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <span class="n">1</span>
+          <h3>Free chat + Quick Zoning Check</h3>
+          <p class="free-flag" style="margin-top:10px">Free — start here</p>
+          <p>Tell Mish about your site or idea. She checks the zoning, key LEP controls and obvious constraints, and gives you an honest first take and your likely pathway — exempt, CDC or DA.</p>
+        </div>
+        <div class="step">
+          <span class="n">2</span>
+          <h3>Feasibility — what the land can become</h3>
+          <p>If the first take is promising, a feasibility and yield study tests it properly: what you can build, how many lots or dwellings, and what is holding the site back.</p>
+        </div>
+        <div class="step">
+          <span class="n">3</span>
+          <h3>Concept design + DA support</h3>
+          <p>Concept layouts and massing that fit the controls, then support through the application — coordinating consultants, the Statement of Environmental Effects, Clause 4.6 requests and council RFI responses.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5 · THE 7 MISTAKES -->
+  <section class="section" id="mistakes">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>What can your land really become? First, avoid the 7 costly mistakes</h2>
+        <p class="sub">This is the guide, in full, on this page — no email required to read it. These are the mistakes NSW landowners most often make before subdividing or applying for a DA, and what to do instead. It is general information, not a promise about any particular site — your site gets its answer in the free check. Prefer a copy you can keep or share? <a class="link-arrow" href="7-costly-mistakes-guide.pdf" download>Download the free guide (PDF) →</a></p>
+      </div>
+
+      <div class="mistakes">
+        <details class="mistake" open>
+          <summary><span class="m-num">01</span> Designing before checking the controls <span class="m-plus" aria-hidden="true">+</span></summary>
+          <div class="mistake-body">
+            <p>The most expensive drawings are the ones for a building the LEP was never going to allow — too tall, too much floor space, or a use that is not permitted in the zone at all. By the time council says no, the design fees are already spent.</p>
+            <p class="fix"><b>Do this instead:</b> Check zoning, height, FSR and minimum lot size before any design work. Thirty minutes with the controls can save an entire design fee.</p>
+          </div>
+        </details>
+
+        <details class="mistake">
+          <summary><span class="m-num">02</span> Judging a subdivision by land size alone <span class="m-plus" aria-hidden="true">+</span></summary>
+          <div class="mistake-body">
+            <p>“My block is 1,200 square metres, so I can get two lots” sounds logical — but subdivision turns on minimum lot size, lot width and frontage, access, slope, services and how the resulting lots are shaped, not on area alone. Plenty of large blocks cannot split; some smaller ones can.</p>
+            <p class="fix"><b>Do this instead:</b> Test the actual controls for your lot — minimum lot size and width first — before assuming a yield, or pricing the land on one.</p>
+          </div>
+        </details>
+
+        <details class="mistake">
+          <summary><span class="m-num">03</span> Discovering flooding, bushfire or heritage late <span class="m-plus" aria-hidden="true">+</span></summary>
+          <div class="mistake-body">
+            <p>Constraints do not stop every project — but finding out about a flood study, a bushfire assessment or a heritage listing after you have designed, bought or lodged can mean redesigns, extra consultants and months of delay.</p>
+            <p class="fix"><b>Do this instead:</b> Flag the obvious constraints at the very start, the way the free Quick Zoning Check does, and let them shape the idea while changing it is still cheap.</p>
+          </div>
+        </details>
+
+        <details class="mistake">
+          <summary><span class="m-num">04</span> Forgetting access, parking and services <span class="m-plus" aria-hidden="true">+</span></summary>
+          <div class="mistake-body">
+            <p>A layout can comply on paper and still fail in practice: no workable driveway, no room for parking and turning, stormwater with nowhere to go, or lots that cannot be serviced. Councils and certifiers test all of this — late changes here are painful.</p>
+            <p class="fix"><b>Do this instead:</b> Think about access, parking, stormwater and services at concept stage, alongside the buildings — not as an afterthought once the design is finished.</p>
+          </div>
+        </details>
+
+        <details class="mistake">
+          <summary><span class="m-num">05</span> Picking the wrong approval pathway <span class="m-plus" aria-hidden="true">+</span></summary>
+          <div class="mistake-body">
+            <p>Lodging a DA for something that could have been a CDC wastes months. Assuming a CDC for something that was never going to comply wastes fees — and sometimes a certifier has to stop the job. The pathway is a decision, not a formality.</p>
+            <p class="fix"><b>Do this instead:</b> Work out early whether your project is exempt, complying development or a DA — and design to the pathway you are actually on.</p>
+          </div>
+        </details>
+
+        <details class="mistake">
+          <summary><span class="m-num">06</span> Reading the LEP and stopping there <span class="m-plus" aria-hidden="true">+</span></summary>
+          <div class="mistake-body">
+            <p>The local LEP is only one layer. State policies (SEPPs) sit over the top — the Housing SEPP alone changes what is possible for dual occupancies, co-living and secondary dwellings — and the local DCP adds detailed controls on top of both. Checking one layer and missing the others gives you the wrong answer with confidence.</p>
+            <p class="fix"><b>Do this instead:</b> Check all three layers — SEPPs, LEP and DCP — together. That layering is exactly what planning research is for.</p>
+          </div>
+        </details>
+
+        <details class="mistake">
+          <summary><span class="m-num">07</span> Spending in the wrong order <span class="m-plus" aria-hidden="true">+</span></summary>
+          <div class="mistake-body">
+            <p>Full architectural design, surveys and a shelf of consultant reports — all commissioned before anyone has tested whether the idea stacks up. If the feasibility fails, almost none of that spend can be reused.</p>
+            <p class="fix"><b>Do this instead:</b> Sequence the spend: free check first, then feasibility, then concept, then the consultants a DA actually needs. Each step earns the next one.</p>
+          </div>
+        </details>
+      </div>
+
+      <p style="margin-top:26px;color:var(--ink-soft);max-width:44rem">Read a mistake that sounds like your situation? That is what the free chat is for — bring the site, and you will get the honest version for your land, not the general one. <a class="link-arrow" href="#book" data-intent-link="chat">Book the free chat →</a></p>
+    </div>
+  </section>
+
+  <!-- 6 · PAID SERVICES -->
+  <section class="section alt" id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Services, when you're ready</h2>
+        <p class="sub">These come after the free check — once you know your land is worth a closer look. No fees are listed here on purpose: the right scope depends on your site, and the free chat is where that gets worked out honestly.</p>
+        <p class="scope-note">A note on scope: concept design and massing here is planning and concept-level work — testing what a site can hold and how it could be arranged. It is not architectural documentation, and it is not a substitute for engaging a registered architect where your project needs one.</p>
+      </div>
+      <div class="svc-rows">
+        <div class="svc-row"><h3>Site feasibility and yield studies</h3><p>What you can build, how many lots or dwellings, and what's holding the site back.</p></div>
+        <div class="svc-row"><h3>Planning research and briefing notes</h3><p>Permissibility, LEP/DCP controls, SEPPs and precedent approvals, written up in plain English.</p></div>
+        <div class="svc-row"><h3>Subdivision and lot layout design</h3><p>Concept layouts, road and access options, staging.</p></div>
+        <div class="svc-row"><h3>Concept design and massing</h3><p>Houses, additions, dual occupancies, townhouses and mixed-use buildings, including solar and overshadowing studies.</p></div>
+        <div class="svc-row"><h3>3D renders and visualisations</h3><p>For marketing, council presentations or just seeing your project before it's built.</p></div>
+        <div class="svc-row"><h3>DA support</h3><p>Coordinating consultants, preparing statements of environmental effects, Clause 4.6 variation requests and responses to council RFIs.</p></div>
+        <div class="svc-row"><h3>Urban design reports</h3><p>Design rationale and context analysis for larger projects.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 · PORTFOLIO / PROOF -->
+  <section class="section" id="work">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Selected Works | 2020–2025</h2>
+        <p class="sub">Portfolio projects from Mishti's architecture and urban design studies. They are labelled as what they are — academic design work — because how a project is described matters as much as how it looks.</p>
+      </div>
+
+      <div class="proj-grid">
+        <article class="proj">
+          <img src="asset-06.jpg" alt="Render of the Stithiban group housing towers in Dwarka, with the shared courtyard, playground and basketball court in the foreground" loading="lazy" />
+          <div class="p-body">
+            <span class="p-tag">Academic · Architecture · 2021</span>
+            <h3>Stithiban Group Housing, Dwarka</h3>
+            <p>Group housing on a 4.88-hectare site in Sector 19B, Dwarka (2021): four buildings with towers aligned for natural light and prevailing wind, a sky bridge between towers, and a central water body at the heart of the shared landscape. Homes were planned as 2 BHK at 100 sqm and 120 sqm, and 3 BHK at 130 sqm, with a separate EWS parcel and amenities including a basketball court, tennis, a playground and a senior-citizens area. Architectural Design studio project, Bachelor of Architecture.</p>
+          </div>
+        </article>
+        <article class="proj">
+          <img src="asset-07.jpg" alt="Structure plan diagrams for the Rosehill precinct showing the existing road pattern beside the proposed street layout and intersection detail" loading="lazy" />
+          <div class="p-body">
+            <span class="p-tag">Academic · Urban design studio · 2025</span>
+            <h3>Rosehill High-Speed Rail Precinct</h3>
+            <p>A strategic summary of the proposed high-speed rail station at Rosehill–Camellia in GPOP, built on three strategies — Country Engagement (Country-led design, with green spines to the water's edge), Adaptive Reuse and Active Frontage — with a structure plan, accessibility and land-use mapping. On James Ruse Drive, the work tested protected (Dutch-style) intersections, walkability upgrades, at-grade integration and a tunnel option. Integrated Urbanism Studio, Master of Urbanism, University of Sydney, 2025.</p>
+          </div>
+        </article>
+        <article class="proj">
+          <img src="asset-08.jpg" alt="Aerial visualisation of Rydalmere Vision 2050, showing a tree-lined main street with mid-rise brick buildings and active street frontages" loading="lazy" />
+          <div class="p-body">
+            <span class="p-tag">Academic · Urban design · 2024</span>
+            <h3>Rydalmere Vision 2050</h3>
+            <p>A precinct vision for Rydalmere in Greater Sydney, starting from flooding analysis on the Parramatta River, road connectivity and vegetation. The plan works through light rail and riverfront infrastructure — the South Street stop and the Camellia–Rydalmere Bridge — with restored wetlands and Eric Primrose Reserve as green-blue infrastructure, guided by precedents including The Goods Line, Barangaroo, Green Square Town Centre and Sydney Olympic Park. Urban Design studio, University of Sydney, 2024.</p>
+            <figure class="p-sub-img">
+              <img src="asset-09.jpg" alt="Rydalmere masterplan diagram showing the Parramatta River, restored wetlands, light rail, bus and ferry connections" loading="lazy" />
+              <figcaption>The Rydalmere masterplan — river, wetlands and light rail (L), bus (B) and ferry (F) connections. Academic work.</figcaption>
+            </figure>
+          </div>
+        </article>
+        <article class="proj">
+          <img src="asset-10.jpg" alt="Render of the Mandi Airport terminal exterior, with its wave-shaped roof, full-height glazing, elevated approach road and solar-panel car park canopy" loading="lazy" />
+          <div class="p-body">
+            <span class="p-tag">Academic · Architecture thesis · 2023</span>
+            <h3>Mandi Airport, Himachal Pradesh</h3>
+            <p>A greenfield airport at Nagchala, about 10 km from Mandi town in the Balh valley, crossed by three khads — Suketi, Kansa and Chail — so flooding, channelisation and land filling were core design challenges. The terminal's wave roof is inspired by aircraft wings. Arrival 3,100 sqm, Departure 4,720 sqm, Service/Basement 2,720 sqm, parking for 421 cars, runway 06/24. Final-year architecture thesis, 2023.</p>
+          </div>
+        </article>
+        <article class="proj">
+          <div class="proj-text-head">
+            <p class="precinct-line">Marion Street Precinct</p>
+            <p class="precinct-sub">Leichhardt, Inner West Sydney — 3.6 ha, beside the Marion light-rail stop</p>
+          </div>
+          <div class="p-body">
+            <span class="p-tag">Academic · Strategic planning · 2024</span>
+            <h3>Marion Street Precinct, Leichhardt</h3>
+            <p>A review of a planning proposal to amend the Leichhardt LEP 2013 for this 3.6-hectare precinct, tested against the Leichhardt Industrial Lands Study and the Eastern City District Plan. The work included a lot-by-lot land-use survey and land-use, zoning, movement and topography mapping, and recommended mixed use that adds housing while keeping employment land. Strategic Planning in Action, University of Sydney, 2024. Academic work.</p>
+          </div>
+        </article>
+        <article class="proj">
+          <div class="proj-text-head">
+            <p class="precinct-line">54 Canonbury Grove</p>
+            <p class="precinct-sub">Dulwich Hill, Inner West Sydney — residential upgrade in a Heritage Conservation Area</p>
+          </div>
+          <div class="p-body">
+            <span class="p-tag">Academic · Development assessment · 2023</span>
+            <h3>54 Canonbury Grove, Dulwich Hill</h3>
+            <p>Full DA documentation for a residential upgrade in a Heritage Conservation Area, including a Statement of Environmental Effects, applying BASIX, SEPP, LEP and DCP controls — the same documents and the same tests a real DA is judged on. Development Assessment, University of Sydney, 2023. Academic work.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="skills">
+        <h3>How the work gets tested and explained</h3>
+        <p>GIS and 3D modelling are not decoration — they are how controls get tested before you commit. Mish works across QGIS and ArcGIS, AutoCAD, Revit, SketchUp, Lumion, Enscape and V-Ray, with Adobe Suite (Photoshop, Illustrator, InDesign) and Python — including GIS-to-BIM workflows, envelope and yield testing against planning controls, and solar and overshadowing analysis — then turns the results into diagrams and renders a landowner or a council panel can actually read.</p>
+      </div>
+
+      <p class="testimonial-note">Testimonials — to be added only with real client permission.</p>
+    </div>
+  </section>
+
+  <!-- 8 · BRIDGE -->
+  <section class="section green bridge">
+    <div class="wrap">
+      <h2>Not sure what you need?</h2>
+      <p>Start with the free chat and we'll work it out together. Bring the address and the idea — half-formed is fine. You will leave knowing what your land can become, what could hold it back, and what the next step is.</p>
+    </div>
+  </section>
+
+  <!-- 8a · WHAT HAPPENS AFTER YOU BOOK -->
+  <section class="section alt" id="after">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>What happens after you book</h2>
+        <p class="sub">No pitch, no pressure. This is the whole sequence:</p>
+      </div>
+      <div class="after-steps">
+        <div class="after-step"><h3>1 · Mish calls you</h3><p>At the time that suits you, for the free 20–30 minute chat — or she runs the Quick Zoning Check on the address you sent.</p></div>
+        <div class="after-step"><h3>2 · She asks about your site</h3><p>Where it is, what you're hoping to do with it, and what's worrying you about it. You do most of the talking.</p></div>
+        <div class="after-step"><h3>3 · You get the honest first take</h3><p>Whether the idea looks worth pursuing, what could hold the site back, and what the next step would be. If the answer is “don't spend on this”, you'll hear exactly that.</p></div>
+      </div>
+      <div class="faq-box">
+        <h3>What does it cost?</h3>
+        <p>The first chat and zoning check are free. If you then want a feasibility study, I'll tell you exactly what it involves before any fee.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 · CLOSE / FORM -->
+  <section class="section" id="book">
+    <div class="wrap form-grid">
+      <div class="book-copy">
+        <h2>Book the free chat, or ask for the free zoning check</h2>
+        <p>Tell Mish where the land is and what you're thinking of doing. She will reply to arrange the chat, or run the Quick Zoning Check on your property — zoning, height, FSR, minimum lot size and any obvious constraints.</p>
+        <p>No fee, no obligation, and no hard sell afterwards. If the idea is not worth pursuing, you will hear that plainly — that honesty is the point.</p>
+        <div class="contact-lines">
+          <a href="mailto:mishtisaxena7@gmail.com"><span class="lbl">Email</span> mishtisaxena7@gmail.com</a>
+          <a href="tel:+61411676138"><span class="lbl">Phone</span> 0411 676 138</a>
+          <a href="https://landsp.com.au" target="_blank" rel="noopener"><span class="lbl">Work</span> Land Specialists — landsp.com.au</a>
+        </div>
+        <p class="fineprint" style="margin-top:22px">Mish is an Urban Designer at Land Specialists Pty Ltd, Sydney. This is her personal page — it is not the company's official website.</p>
+      </div>
+
+      <form class="book" id="bookForm" novalidate>
+        <div class="intent-switch" role="group" aria-label="What would you like?">
+          <button type="button" class="intent-btn" id="intentChat" aria-pressed="true">Free 20–30 min chat</button>
+          <button type="button" class="intent-btn" id="intentZoning" aria-pressed="false">Free Quick Zoning Check</button>
+        </div>
+        <div class="field">
+          <label for="fName">Your name</label>
+          <input id="fName" name="name" type="text" autocomplete="name" required />
+        </div>
+        <div class="field">
+          <label for="fContact">Email or phone</label>
+          <input id="fContact" name="contact" type="text" autocomplete="email" required />
+        </div>
+        <div class="field">
+          <label for="fAddress">Property address or suburb</label>
+          <input id="fAddress" name="address" type="text" autocomplete="street-address" required />
+        </div>
+        <div class="field">
+          <label for="fIdea">Tell me about your site or idea</label>
+          <textarea id="fIdea" name="idea" placeholder="For example: a corner block we're thinking of splitting into two lots, or a dual occupancy if the controls allow it…"></textarea>
+        </div>
+        <button type="submit" class="btn" style="width:100%" id="submitBtn">Send and book my free chat</button>
+        <div class="form-status" id="formStatus" role="status"></div>
+        <p class="form-note">This page does not save or store anything you type. Pressing send opens your own email app with a message to mishtisaxena7@gmail.com already filled in — you just press send there. Prefer not to use the form? Email or call using the details on the left.</p>
+        <p class="privacy-note" id="privacy"><b>Privacy:</b> We use the details you share here only to respond to your enquiry about your site. We don't sell your details or add you to a marketing list.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h3>Mishti Saxena</h3>
+        <p style="margin-top:8px">Urban Designer<br />Sydney, NSW, Australia</p>
+      </div>
+      <div>
+        <h3>Get in touch</h3>
+        <div class="foot-links" style="margin-top:8px">
+          <a href="mailto:mishtisaxena7@gmail.com">mishtisaxena7@gmail.com</a>
+          <a href="tel:+61411676138">0411 676 138</a>
+          <a href="https://landsp.com.au" target="_blank" rel="noopener">Landsp.com.au</a>
+        </div>
+      </div>
+      <div>
+        <h3>Start free</h3>
+        <div class="foot-links" style="margin-top:8px">
+          <a href="#book" data-intent-link="chat">Book a free 20–30 min chat</a>
+          <a href="#book" data-intent-link="zoning">Get a free Quick Zoning Check</a>
+          <a href="#mistakes">Read the 7 costly mistakes</a>
+          <a href="#privacy">Privacy</a>
+          <a href="#disclaimer">Disclaimer</a>
+        </div>
+      </div>
+    </div>
+    <div class="disclaimer-box" id="disclaimer">
+      <h3>Disclaimer</h3>
+      <p>The information on this page — including the free Quick Zoning Check — is general information only. It is not legal, planning or building advice. Planning controls (LEP, DCP, SEPP) change over time, so please check the current controls with your local council before you rely on anything here. A zoning check does not guarantee an approval, a yield, or any particular outcome for your land.</p>
+      <p><b>Privacy:</b> We use the details you share here only to respond to your enquiry about your site. We don't sell your details or add you to a marketing list.</p>
+    </div>
+    <p class="foot-fine">Mishti Saxena holds a Bachelor of Architecture and a Master of Urbanism (Urban Design), and is an Urban Designer at Land Specialists Pty Ltd, Sydney. This personal page is not the official website of Land Specialists. Portfolio projects shown are academic work and are labelled as such.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // Mobile menu
+  var menuBtn = document.getElementById('menuBtn');
+  var mobileMenu = document.getElementById('mobileMenu');
+  menuBtn.addEventListener('click', function(){
+    var open = mobileMenu.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  mobileMenu.addEventListener('click', function(e){
+    if (e.target.tagName === 'A') {
+      mobileMenu.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded','false');
+    }
+  });
+
+  // Pathway tabs
+  var tabBtns = Array.prototype.slice.call(document.querySelectorAll('.tab-btn'));
+  tabBtns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      tabBtns.forEach(function(b){
+        var active = b === btn;
+        b.setAttribute('aria-selected', active ? 'true' : 'false');
+        var panel = document.getElementById(b.getAttribute('aria-controls'));
+        if (panel) panel.hidden = !active;
+      });
+    });
+  });
+
+  // Booking intent: chat vs zoning check
+  var intent = 'chat';
+  var intentChat = document.getElementById('intentChat');
+  var intentZoning = document.getElementById('intentZoning');
+  var submitBtn = document.getElementById('submitBtn');
+  function setIntent(next){
+    intent = next;
+    intentChat.setAttribute('aria-pressed', intent === 'chat' ? 'true' : 'false');
+    intentZoning.setAttribute('aria-pressed', intent === 'zoning' ? 'true' : 'false');
+    submitBtn.textContent = intent === 'chat'
+      ? 'Send and book my free chat'
+      : 'Send and request my free zoning check';
+  }
+  intentChat.addEventListener('click', function(){ setIntent('chat'); });
+  intentZoning.addEventListener('click', function(){ setIntent('zoning'); });
+  Array.prototype.forEach.call(document.querySelectorAll('[data-intent-link]'), function(link){
+    link.addEventListener('click', function(){ setIntent(link.getAttribute('data-intent-link')); });
+  });
+
+  // Form -> pre-filled email (nothing is stored by this page)
+  var form = document.getElementById('bookForm');
+  var status = document.getElementById('formStatus');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var name = document.getElementById('fName').value.trim();
+    var contact = document.getElementById('fContact').value.trim();
+    var address = document.getElementById('fAddress').value.trim();
+    var idea = document.getElementById('fIdea').value.trim();
+    if (!name || !contact || !address) {
+      status.className = 'form-status show';
+      status.textContent = 'Please fill in your name, an email or phone number, and the property address or suburb — those three are what Mish needs to run the check or book the chat.';
+      return;
+    }
+    var subject = intent === 'chat'
+      ? 'Free 20–30 min chat — ' + address
+      : 'Free Quick Zoning Check — ' + address;
+    var lines = [
+      'Hi Mish,',
+      '',
+      intent === 'chat'
+        ? 'I would like to book the free 20–30 minute chat.'
+        : 'I would like the free Quick Zoning Check for my property.',
+      '',
+      'Name: ' + name,
+      'Email / phone: ' + contact,
+      'Property address or suburb: ' + address,
+      '',
+      'About my site or idea:',
+      idea || '(to discuss on the call)'
+    ];
+    var href = 'mailto:mishtisaxena7@gmail.com'
+      + '?subject=' + encodeURIComponent(subject)
+      + '&body=' + encodeURIComponent(lines.join('\n'));
+    status.className = 'form-status show';
+    status.textContent = 'Your email app is opening with everything filled in, addressed to mishtisaxena7@gmail.com — just press send there. Nothing you typed has been saved on this page. If your email app did not open, email Mish directly at mishtisaxena7@gmail.com or call 0411 676 138.';
+    window.location.href = href;
+  });
+})();
+</script>
+</body>
+</html>
