@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mishti-saxena-landing-page.vercel.app/sitemap.xml
