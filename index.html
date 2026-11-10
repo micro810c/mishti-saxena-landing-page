@@ -150,8 +150,9 @@
   .link-arrow:hover{text-decoration:underline}
 
   /* ---------- Hero ---------- */
-  .hero{padding:52px 0 60px;background:var(--sage-soft);border-bottom:1px solid var(--line-sage)}
+  .hero{padding:44px 0 40px;background:var(--sage-soft);border-bottom:1px solid var(--line-sage)}
   .hero-grid{display:grid;gap:32px}
+  @media(max-width:919px){.hero-grid{grid-template-columns:minmax(0,1fr)}}
   @media(min-width:920px){.hero-grid{grid-template-columns:1.05fr .95fr;gap:48px;align-items:start}}
   .hero h1{font-size:clamp(2.3rem,5.2vw,3.6rem);font-weight:700;letter-spacing:-.01em}
   .hero .lede{margin-top:20px;font-size:1.13rem;color:var(--ink-soft);max-width:34rem}
@@ -159,10 +160,10 @@
   .hero-trust{margin-top:22px;font-size:.95rem;font-weight:600;color:var(--ink);max-width:34rem}
   .hero-guide-link{margin-top:12px;font-size:.95rem}
 
-  /* Hero portrait — beside the headline, above the sample check card */
+  /* Hero portrait — beside the headline; the sample check card sits below the hero grid */
   .hero-side{display:grid;gap:22px;align-content:start}
-  .hero-photo{margin:0}
-  .hero-photo img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:center 22%;
+  .hero-photo{margin:0;max-width:560px}
+  .hero-photo img{width:100%;aspect-ratio:7/5;object-fit:cover;object-position:top;
     border-radius:var(--radius);border:1px solid var(--line-sage);box-shadow:var(--shadow)}
   .hero-photo figcaption{margin-top:9px;font-size:.88rem;font-weight:600;color:var(--ink-soft)}
 
@@ -181,6 +182,8 @@
   .sample-rows dt{font-weight:700;font-size:.88rem;color:var(--muted)}
   .sample-rows dd{margin:0;color:var(--ink-soft)}
   .sample-foot{margin-top:14px;font-size:.88rem;color:var(--muted)}
+  /* Sample card sits below the hero grid, centred, still on the sage hero background */
+  .hero-sample{max-width:720px;margin:32px auto 0}
   @media(max-width:480px){.sample-rows>div{grid-template-columns:1fr;gap:2px}}
 
   /* ---------- Sections ---------- */
@@ -236,7 +239,7 @@
   @media(min-width:640px){.about-intro{flex-direction:row;gap:26px;align-items:flex-start}}
   .about-photo{margin:0;flex:0 0 auto;width:min(260px,82%)}
   @media(min-width:640px){.about-photo{width:228px}}
-  .about-photo img{display:block;width:100%;height:auto;border-radius:var(--radius);border:1px solid var(--line-sage);box-shadow:var(--shadow)}
+  .about-photo img{display:block;width:100%;aspect-ratio:20/21;object-fit:cover;object-position:center 3%;border-radius:var(--radius);border:1px solid var(--line-sage);box-shadow:var(--shadow)}
   .about-intro-text{min-width:0}
   .fact-box{background:var(--surface);border:1px solid var(--line-sage);border-radius:var(--radius);padding:26px 28px;box-shadow:var(--shadow)}
   .fact-box h3{font-size:1.15rem;margin-bottom:6px}
@@ -364,7 +367,7 @@
   .started h3{font-size:1.3rem}
   .started p{color:var(--ink-soft);margin-top:12px}
   .started blockquote{margin:16px 0 0;padding:14px 18px;background:var(--sand-soft);border-radius:var(--radius-sm);font-family:"Fraunces","Source Serif 4",Georgia,serif;font-size:1.08rem;line-height:1.55;color:var(--ink)}
-  .auth-fig{margin-top:36px}
+  .auth-fig{margin:30px auto 0;max-width:640px}
   .auth-fig img{border-radius:var(--radius);border:1px solid var(--line);width:100%;background:#fff}
   .auth-fig figcaption{margin-top:10px;font-size:.84rem;color:var(--muted);line-height:1.5}
   .auth-cols{display:grid;gap:22px;margin-top:36px}
@@ -528,10 +531,13 @@
       </div>
       <div class="hero-side">
         <figure class="hero-photo">
-          <img src="mishti-portrait.jpg" alt="Portrait of Mishti Saxena, Urban Designer, Sydney" width="720" height="1282" />
+          <img src="mishti-portrait-hero.jpg" alt="Portrait of Mishti Saxena, Urban Designer, Sydney" />
           <figcaption>Mishti Saxena — Urban Designer, Sydney</figcaption>
         </figure>
-      <div class="sample-card" role="img" aria-label="Sample Quick Zoning Check result for a fictional property at 12 Example Street, Sampletown NSW, showing example values: zoning R2 Low Density Residential, maximum height 9.5 metres, floor space ratio 0.5 to 1, minimum lot size 450 square metres, and a flood planning constraint flagged. Sample only — example values, not a real property.">
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="sample-card hero-sample" role="img" aria-label="Sample Quick Zoning Check result for a fictional property at 12 Example Street, Sampletown NSW, showing example values: zoning R2 Low Density Residential, maximum height 9.5 metres, floor space ratio 0.5 to 1, minimum lot size 450 square metres, and a flood planning constraint flagged. Sample only — example values, not a real property.">
         <p class="sample-flag">Sample only — example values, not a real property</p>
         <div class="sample-body">
           <p class="sample-kicker">Quick Zoning Check</p>
@@ -552,7 +558,6 @@
           </div>
           <p class="sample-foot">This is what the free check looks like. Yours is run on your real address.</p>
         </div>
-      </div>
       </div>
     </div>
   </div>
@@ -842,7 +847,7 @@
         <div class="body">
           <div class="about-intro">
             <figure class="about-photo">
-              <img src="mishti-portrait.jpg" alt="Portrait of Mishti Saxena, Urban Designer, Sydney" width="720" height="1282" loading="lazy" />
+              <img src="mishti-portrait.jpg" alt="Portrait of Mishti Saxena, Urban Designer, Sydney" loading="lazy" />
             </figure>
             <div class="about-intro-text">
               <p class="sec-num">05 — About</p>
@@ -997,7 +1002,7 @@
       </div>
 
       <form class="book" id="bookForm" novalidate>
-        <input type="hidden" name="access_key" value="REPLACE_WITH_MISHTI_WEB3FORMS_KEY" />
+        <input type="hidden" name="access_key" value="35feca9f-a4eb-4497-926a-ff240bed45cb" />
         <input type="hidden" name="subject" id="fSubject" value="Free 20–30 min chat request" />
         <input type="hidden" name="from_name" value="Mishti Saxena landing page" />
         <input type="hidden" name="request_type" id="fIntent" value="Free 20–30 min chat" />
