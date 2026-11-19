@@ -1,9 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.mishtisaxena.com/</loc>
     <lastmod>2026-11-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.mishtisaxena.com/mishti-portrait-hero-sq.jpg</image:loc>
+      <image:caption>Mishti Saxena, urban designer in Sydney</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.mishtisaxena.com/asset-02.jpg</image:loc>
+      <image:caption>Rosehill station precinct render</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.mishtisaxena.com/asset-06.jpg</image:loc>
+      <image:caption>Stithiban courtyard</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.mishtisaxena.com/asset-08.jpg</image:loc>
+      <image:caption>Rydalmere aerial visualisation</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.mishtisaxena.com/asset-10.jpg</image:loc>
+      <image:caption>Mandi terminal exterior</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.mishtisaxena.com/7-costly-mistakes-guide.pdf</loc>
+    <lastmod>2026-11-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>
