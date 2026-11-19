@@ -1,3 +1,16 @@
 User-agent: *
 Allow: /
-Sitemap: https://mishti-saxena-landing-page.vercel.app/sitemap.xml
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://www.mishtisaxena.com/sitemap.xml

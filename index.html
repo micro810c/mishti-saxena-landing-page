@@ -6,14 +6,35 @@
 <meta name="color-scheme" content="light dark" />
 <meta name="description" content="Mishti Saxena — Urban Designer in Sydney, NSW. Find out what your land can really become: a free chat and a free Quick Zoning Check before you spend on designers, consultants or a DA." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://mishti-saxena-landing-page.vercel.app/" />
+<meta property="og:url" content="https://www.mishtisaxena.com/" />
 <meta property="og:title" content="Mishti Saxena — Urban Designer, Sydney | What can your land really become?" />
 <meta property="og:description" content="You own land in NSW and have an idea — a subdivision, a dual occupancy, townhouses, or something bigger. Get an honest first take, free: what your zoning allows, what could hold the site back, and what to do next." />
-<meta property="og:image" content="https://mishti-saxena-landing-page.vercel.app/asset-02.jpg" />
+<meta property="og:image" content="https://www.mishtisaxena.com/asset-02.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Mishti Saxena — Urban Designer, Sydney | What can your land really become?" />
 <meta name="twitter:description" content="A free chat and a free Quick Zoning Check for NSW landowners — before you spend on designers, consultants or a DA." />
-<meta name="twitter:image" content="https://mishti-saxena-landing-page.vercel.app/asset-02.jpg" />
+<meta name="twitter:image" content="https://www.mishtisaxena.com/asset-02.jpg" />
+<link rel="canonical" href="https://www.mishtisaxena.com/" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Mishti Saxena",
+  "jobTitle": "Urban Designer",
+  "description": "Urban Designer in Sydney, NSW. Helps landowners understand what their land can really become, with a free chat and a free Quick Zoning Check before they spend on designers, consultants or a DA.",
+  "url": "https://www.mishtisaxena.com/",
+  "image": "https://www.mishtisaxena.com/mishti-portrait-hero-sq.jpg",
+  "email": "mailto:mishtisaxena7@gmail.com",
+  "telephone": "+61 411 676 138",
+  "address": { "@type": "PostalAddress", "addressLocality": "Sydney", "addressRegion": "NSW", "addressCountry": "AU" },
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "University of Sydney" },
+    { "@type": "CollegeOrUniversity", "name": "Guru Gobind Singh Indraprastha University" }
+  ],
+  "worksFor": { "@type": "Organization", "name": "Land Specialists Pty Ltd", "url": "https://landsp.com.au" },
+  "sameAs": [ "https://www.linkedin.com/in/mishti-saxena-1a157a223" ]
+}
+</script>
 <link rel="icon" href="/favicon.ico" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -75,7 +96,7 @@
     }
   }
   *{box-sizing:border-box}
-  html{scroll-behavior:smooth}
+  html{scroll-behavior:smooth;-webkit-tap-highlight-color:rgba(168,91,40,.18)}
   @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
   body{
     margin:0;background:var(--bg);color:var(--ink);
@@ -118,31 +139,26 @@
   .mobile-menu.open{display:block}
   .mobile-menu a{display:block;padding:12px 4px;color:var(--ink);text-decoration:none;font-weight:500;border-bottom:1px solid var(--line)}
   .mobile-menu a[aria-current="true"]{color:var(--clay);font-weight:700}
-  .mobile-menu a.mm-cta{margin-top:12px;background:var(--green-deep);color:var(--green-ink);text-align:center;border-bottom:none;border-radius:10px;font-weight:600;padding:13px 16px}
+  .mobile-menu a.mm-cta{margin-top:12px;background:var(--green-deep);color:var(--green-ink);text-align:center;border-bottom:none;border-radius:10px;font-weight:600;padding:12px 16px}
   @media (prefers-color-scheme: dark){.mobile-menu a.mm-cta{background:var(--green);color:#10160f}.mobile-menu a[aria-current="true"]{color:var(--clay-bright)}}
 
   .btn{
     display:inline-flex;align-items:center;justify-content:center;gap:8px;
     background:var(--green-deep);color:var(--green-ink);text-decoration:none;
-    font-weight:600;font-size:1rem;padding:13px 22px;border-radius:10px;border:1px solid var(--green-deep);
+    font-weight:600;font-size:1rem;padding:12px 24px;border-radius:10px;border:1px solid var(--green-deep);
     cursor:pointer;min-height:48px;text-align:center;
   }
   .btn:hover{background:var(--green);border-color:var(--green)}
-  /* Primary-button hover / splash (subtle) */
-  .btn{position:relative;overflow:hidden;transition:transform .25s ease,box-shadow .25s ease,background .25s ease,border-color .25s ease}
-  .btn::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
-    background:radial-gradient(circle at 50% 50%, rgba(224,154,95,.55), rgba(224,154,95,0) 68%);
-    opacity:0;transition:opacity .3s ease}
+  /* Primary-button hover lift + real press feedback */
+  .btn{position:relative;transition:transform .25s ease,box-shadow .25s ease,background .25s ease,border-color .25s ease}
   .btn:hover,.btn:focus-visible{transform:translateY(-2px);box-shadow:0 12px 26px rgba(18,32,22,.24)}
-  .btn:hover::after,.btn:focus-visible::after{opacity:1}
-  .btn:active{transform:translateY(0)}
+  .btn:active{transform:scale(.97);box-shadow:0 4px 12px rgba(18,32,22,.18)}
   @media (prefers-reduced-motion: reduce){
     .btn{transition:none}
-    .btn:hover,.btn:focus-visible{transform:none;box-shadow:none}
-    .btn::after{transition:none}
+    .btn:hover,.btn:focus-visible,.btn:active{transform:none;box-shadow:none}
   }
   @media (prefers-color-scheme: dark){.btn{background:var(--green);color:#10160f;border-color:var(--green)}.btn:hover{filter:brightness(1.1)}}
-  .btn.small{padding:9px 16px;min-height:44px;font-size:.92rem}
+  .btn.small{padding:8px 16px;min-height:44px;font-size:.92rem}
   .btn.ghost{background:transparent;color:var(--green);border-color:var(--green)}
   .btn.ghost:hover{background:var(--sage-soft);color:var(--ink);border-color:var(--green)}
   @media (prefers-color-scheme: dark){.btn.ghost{color:var(--green)}.btn.ghost:hover{background:var(--sage-soft);color:var(--ink)}}
@@ -166,21 +182,21 @@
   .hero-photo{margin:0}
   .hero-photo img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:top;
     border-radius:var(--radius);border:1px solid var(--line-sage);box-shadow:var(--shadow)}
-  .hero-photo figcaption{margin-top:9px;font-size:.88rem;font-weight:600;color:var(--ink-soft)}
+  .hero-photo figcaption{margin-top:8px;font-size:.88rem;font-weight:600;color:var(--ink-soft)}
 
   /* Sample zoning check card */
   .sample-card{background:var(--surface);border:1px solid var(--line-sage);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
-  .sample-flag{background:var(--clay);color:#fffdf8;font-weight:700;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;text-align:center;padding:10px 14px}
+  .sample-flag{background:var(--clay);color:#fffdf8;font-weight:600;font-size:.85rem;text-align:center;padding:12px 16px}
   @media (prefers-color-scheme: dark){.sample-flag{color:#241a10}}
   .sample-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
-  .sample-chip{background:var(--sand-soft);border:1px solid var(--sand);border-radius:999px;padding:7px 13px;font-size:.86rem;color:var(--ink-soft)}
+  .sample-chip{background:var(--sand-soft);border:1px solid var(--sand);border-radius:999px;padding:8px 12px;font-size:.86rem;color:var(--ink-soft)}
   .sample-chip b{font-family:"Fraunces",Georgia,serif;font-size:1rem;color:var(--ink);margin-right:5px}
   .sample-body{padding:24px}
-  .sample-kicker{font-size:.8rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--clay)}
+  .sample-kicker{font-size:.85rem;font-weight:600;color:var(--clay)}
   .sample-addr{font-family:"Fraunces","Source Serif 4",Georgia,serif;font-size:1.35rem;font-weight:600;margin-top:4px}
   .sample-rows{margin:8px 0 0}
   .sample-rows>div{display:grid;grid-template-columns:150px 1fr;gap:12px;padding:6px 0;border-top:1px dashed var(--line)}
-  .sample-rows dt{font-weight:700;font-size:.88rem;color:var(--muted)}
+  .sample-rows dt{font-weight:600;font-size:.88rem;color:var(--muted)}
   .sample-rows dd{margin:0;color:var(--ink-soft)}
   .sample-foot{margin-top:10px;font-size:.88rem;color:var(--muted)}
   /* Sample card sits below the hero grid, centred, still on the sage hero background */
@@ -203,12 +219,12 @@
   .free-card{background:var(--surface);border:1px solid var(--line-sage);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
   .free-card h3{font-size:1.45rem}
   .free-tag{display:inline-block;background:var(--sand-soft);color:var(--ink);border:1px solid var(--sand);
-    font-size:.78rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:5px 10px;border-radius:999px;margin-bottom:14px}
+    font-size:.82rem;font-weight:600;padding:4px 12px;border-radius:999px;margin-bottom:14px}
   .free-card p{color:var(--ink-soft);margin-top:10px}
   .checklist{list-style:none;margin:18px 0 0;padding:0}
-  .checklist li{padding:9px 0 9px 30px;position:relative;border-top:1px dashed var(--line);color:var(--ink-soft)}
+  .checklist li{padding:8px 0 8px 32px;position:relative;border-top:1px dashed var(--line);color:var(--ink-soft)}
   .checklist li:first-child{border-top:none}
-  .checklist li::before{content:"";position:absolute;left:2px;top:15px;width:14px;height:8px;border-left:3px solid var(--clay);border-bottom:3px solid var(--clay);transform:rotate(-45deg)}
+  .checklist li::before{content:"";position:absolute;left:2px;top:14px;width:14px;height:8px;border-left:3px solid var(--clay);border-bottom:3px solid var(--clay);transform:rotate(-45deg)}
   .checklist li b{color:var(--ink)}
   .guide-line{margin-top:26px;background:var(--surface);border:1px solid var(--line-sage);border-radius:var(--radius-sm);padding:16px 24px;color:var(--ink);max-width:52rem}
   .guide-line b{color:var(--clay)}
@@ -221,7 +237,7 @@
   .pathway h3{font-size:1.2rem}
   .pathway p.intro{color:var(--ink-soft);margin-top:8px;max-width:42rem}
   .tabs{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
-  .tab-btn{background:var(--bg-alt);border:1px solid var(--line);color:var(--ink);border-radius:999px;padding:9px 18px;font-weight:600;cursor:pointer;min-height:44px}
+  .tab-btn{background:var(--bg-alt);border:1px solid var(--line);color:var(--ink);border-radius:999px;padding:8px 16px;font-weight:600;cursor:pointer;min-height:44px}
   .tab-btn[aria-selected="true"]{background:var(--green-deep);color:#fffdf8;border-color:var(--green-deep)}
   @media (prefers-color-scheme: dark){.tab-btn[aria-selected="true"]{background:var(--green);color:#10160f;border-color:var(--green)}}
   .tab-panel{margin-top:16px;color:var(--ink-soft);max-width:44rem}
@@ -242,7 +258,7 @@
   .fact-box{background:var(--surface);border:1px solid var(--line-sage);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
   .fact-box h3{font-size:1.15rem;margin-bottom:6px}
   .fact-box dl{margin:0}
-  .fact-box dt{font-weight:700;font-size:.85rem;letter-spacing:.03em;text-transform:uppercase;color:var(--muted);margin-top:12px}
+  .fact-box dt{font-weight:600;font-size:.88rem;color:var(--muted);margin-top:12px}
   .fact-box dt:first-of-type{margin-top:8px}
   .fact-box dd{margin:4px 0 0;color:var(--ink-soft)}
   .work-list{margin-top:40px}
@@ -274,7 +290,7 @@
   @media (prefers-color-scheme: dark){.step .n{background:var(--green);color:#10160f}}
   .step h3{font-size:1.25rem;margin-top:16px}
   .step p{color:var(--ink-soft);margin-top:8px}
-  .step .free-flag{color:var(--clay);font-weight:700;font-size:.85rem;letter-spacing:.04em;text-transform:uppercase}
+  .step .free-flag{color:var(--clay);font-weight:600;font-size:.9rem}
 
   /* Mistakes */
   .mistakes{margin-top:36px;display:grid;gap:20px}
@@ -289,7 +305,7 @@
   details.mistake[open ] summary .m-plus{transform:rotate(45deg)}
   .mistake-body{padding:0 24px 24px 64px;color:var(--ink-soft)}
   @media(max-width:560px){.mistake-body{padding-left:24px}}
-  .mistake-body .fix{margin-top:10px;background:var(--sage-soft);border:1px solid var(--line-sage);border-radius:var(--radius-sm);padding:14px 24px;color:var(--ink)}
+  .mistake-body .fix{margin-top:10px;background:var(--sage-soft);border:1px solid var(--line-sage);border-radius:var(--radius-sm);padding:16px 24px;color:var(--ink)}
   .mistake-body .fix b{color:var(--clay)}
 
   /* Services */
@@ -305,7 +321,7 @@
   .proj{background:var(--surface);border:1px solid var(--line-sage);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
   .proj img{width:100%;aspect-ratio:4/3;object-fit:cover}
   .proj .p-body{padding:24px}
-  .proj .p-tag{display:inline-block;background:var(--clay-soft);border:1px solid var(--clay-bright);border-radius:999px;padding:4px 10px;font-size:.76rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--clay)}
+  .proj .p-tag{display:inline-block;background:var(--clay-soft);border:1px solid var(--clay-bright);border-radius:999px;padding:4px 12px;font-size:.8rem;font-weight:600;color:var(--clay)}
   .proj h3{font-size:1.25rem;margin-top:6px}
   .proj p{color:var(--ink-soft);margin-top:8px;font-size:.97rem}
   .india-head{font-size:1.3rem;margin-top:44px}
@@ -321,9 +337,9 @@
   .contact-lines{margin-top:24px;display:grid;gap:10px}
   .contact-lines a{display:inline-flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none;font-weight:600;padding:8px 0;min-height:44px}
   .contact-lines a:hover{color:var(--green)}
-  .contact-lines .lbl{font-size:.8rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);width:78px;flex:none}
+  .contact-lines .lbl{font-size:.85rem;font-weight:600;color:var(--muted);width:84px;flex:none}
   .intent-switch{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
-  .intent-btn{background:var(--bg-alt);border:1px solid var(--line);color:var(--ink);border-radius:999px;padding:10px 18px;font-weight:600;cursor:pointer;min-height:44px}
+  .intent-btn{background:var(--bg-alt);border:1px solid var(--line);color:var(--ink);border-radius:999px;padding:8px 16px;font-weight:600;cursor:pointer;min-height:44px}
   .intent-btn[aria-pressed="true"]{background:var(--green-deep);color:#fffdf8;border-color:var(--green-deep)}
   @media (prefers-color-scheme: dark){.intent-btn[aria-pressed="true"]{background:var(--green);color:#10160f;border-color:var(--green)}}
   form.book{background:var(--surface);border:1px solid var(--line-sage);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
@@ -338,7 +354,7 @@
   .check-label{display:flex;gap:12px;align-items:flex-start;font-weight:500;cursor:pointer;padding:6px 0;min-height:44px}
   .field label.check-label{font-weight:500;margin-bottom:0}
   .check-label input[type="checkbox"]{width:22px;height:22px;min-height:22px;flex:none;margin-top:2px;accent-color:var(--green-deep)}
-  .form-status{display:none;margin-top:16px;background:var(--sand-soft);border:1px solid var(--sand);border-radius:10px;padding:14px 24px;color:var(--ink);font-size:.95rem}
+  .form-status{display:none;margin-top:16px;background:var(--sand-soft);border:1px solid var(--sand);border-radius:10px;padding:16px 24px;color:var(--ink);font-size:.95rem}
   .form-status.show{display:block}
   .form-status.ok{background:var(--clay-soft);border-color:var(--clay)}
   .form-note{margin-top:14px;font-size:.86rem;color:var(--muted)}
@@ -361,7 +377,7 @@
   .started{margin-top:34px;background:var(--surface);border:1px solid var(--line-sage);border-radius:var(--radius);padding:24px}
   .started h3{font-size:1.3rem}
   .started p{color:var(--ink-soft);margin-top:12px}
-  .started blockquote{margin:16px 0 0;padding:14px 18px;background:var(--sand-soft);border-radius:var(--radius-sm);font-family:"Fraunces","Source Serif 4",Georgia,serif;font-size:1.08rem;line-height:1.55;color:var(--ink)}
+  .started blockquote{margin:16px 0 0;padding:16px 20px;background:var(--sand-soft);border-radius:var(--radius-sm);font-family:"Fraunces","Source Serif 4",Georgia,serif;font-size:1.08rem;line-height:1.55;color:var(--ink)}
   .auth-fig{margin:30px auto 0;max-width:900px}
   .auth-fig img{border-radius:var(--radius);border:1px solid var(--line);width:100%;background:#fff}
   .auth-fig figcaption{margin-top:10px;font-size:.84rem;color:var(--muted);line-height:1.5}
@@ -386,7 +402,7 @@
   .proj-text-head .precinct-line{font-family:"Fraunces","Source Serif 4",Georgia,serif;font-size:1.6rem;font-weight:700;color:var(--green);line-height:1.2}
   .proj-text-head .precinct-sub{font-size:.88rem;color:var(--muted);margin-top:4px}
   .scope-note{margin-top:24px;font-size:.92rem;color:var(--muted);max-width:46rem}
-  .privacy-note{margin-top:14px;background:var(--bg-alt);border:1px solid var(--line);border-radius:10px;padding:14px 24px;font-size:.9rem;color:var(--ink-soft)}
+  .privacy-note{margin-top:14px;background:var(--bg-alt);border:1px solid var(--line);border-radius:10px;padding:16px 24px;font-size:.9rem;color:var(--ink-soft)}
   .disclaimer-box{margin-top:28px;padding-top:18px;border-top:1px solid var(--line);font-size:.88rem;color:var(--ink-soft);max-width:56rem}
   .disclaimer-box h3{font-size:1rem;color:var(--ink)}
   .disclaimer-box p{margin-top:8px;color:var(--ink-soft)}
@@ -394,7 +410,7 @@
   /* ---------- Top contact bar ---------- */
   .top-bar{background:var(--green-deep);color:#f4e8cf;font-size:.88rem}
   @media (prefers-color-scheme: dark){.top-bar{background:#1d2f24}}
-  .top-bar-in{display:flex;flex-wrap:wrap;gap:6px 26px;align-items:center;padding-top:7px;padding-bottom:7px}
+  .top-bar-in{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:center;padding-top:8px;padding-bottom:8px}
   .top-bar a{display:inline-flex;align-items:center;gap:8px;color:#f4e8cf;text-decoration:none;font-weight:600;min-height:32px;padding:2px 0}
   .top-bar a:hover{color:#fffdf8;text-decoration:underline}
   .top-bar .icon{color:var(--clay-bright)}
@@ -404,7 +420,7 @@
   .hero-highlights{margin-top:24px;display:grid;grid-template-columns:1fr 1fr;gap:8px;max-width:36rem}
   @media(max-width:560px){.hero-highlights{grid-template-columns:1fr}}
   .hero-highlights span{display:inline-flex;align-items:center;gap:7px;background:var(--sand-soft);border:1px solid var(--clay-bright);
-    border-radius:999px;padding:7px 13px;font-size:.88rem;font-weight:600;color:var(--ink)}
+    border-radius:999px;padding:8px 12px;font-size:.88rem;font-weight:600;color:var(--ink)}
   .hero-highlights span::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--clay);flex:none}
   .contact-lines .icon,.foot-links .icon{color:var(--clay)}
   footer .foot-links .icon{color:var(--clay-bright)}
@@ -450,8 +466,51 @@
   }
   @media (prefers-reduced-motion: reduce){.sticky-cta{transition:none}}
 
+  /* ---------- v4.13 polish: press feedback on every control ---------- */
+  .menu-btn,.tab-btn,.intent-btn{transition:background .2s ease,color .2s ease,border-color .2s ease,transform .15s ease}
+  .menu-btn:hover{background:var(--bg-alt)}
+  .menu-btn:active,.tab-btn:active,.intent-btn:active{transform:scale(.96)}
+  .tab-btn:hover,.intent-btn:hover{border-color:var(--green)}
+  details.mistake summary{transition:background .2s ease}
+  details.mistake summary:hover{background:var(--sage-soft)}
+  details.mistake summary:active{background:var(--sand-soft)}
+  .mobile-menu a{transition:background .2s ease,color .2s ease}
+  .mobile-menu a:active{background:var(--sage-soft)}
+  .nav-links a:active{background:var(--sage-soft)}
+  .contact-lines a:active{color:var(--clay)}
+  @media (prefers-reduced-motion: reduce){
+    .menu-btn,.tab-btn,.intent-btn,details.mistake summary,.mobile-menu a{transition:none}
+    .menu-btn:active,.tab-btn:active,.intent-btn:active{transform:none}
+  }
+
+  /* ---------- Links: banner cards ---------- */
+  .link-cards{display:grid;gap:12px;margin-top:36px}
+  @media(min-width:760px){.link-cards{grid-template-columns:1fr 1fr}}
+  .link-card{display:flex;align-items:center;gap:16px;background:var(--surface);border:1px solid var(--line-sage);
+    border-radius:var(--radius);padding:16px 20px;text-decoration:none;color:var(--ink);box-shadow:var(--shadow);
+    transition:border-color .2s ease,background .2s ease,transform .15s ease}
+  .link-card:hover{border-color:var(--clay-bright);background:var(--clay-soft)}
+  .link-card:active{transform:scale(.99)}
+  .link-card .lc-ic{display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;flex:none;border-radius:50%;
+    background:var(--sage-soft);border:1.5px solid var(--line-sage);color:var(--green)}
+  .link-card .lc-ic svg{width:24px;height:24px}
+  .link-card .lc-txt{min-width:0}
+  .link-card .lc-title{display:block;font-weight:600;font-size:1.05rem}
+  .link-card .lc-desc{display:block;color:var(--ink-soft);font-size:.92rem;margin-top:2px}
+  .link-card .lc-arrow{margin-left:auto;flex:none;color:var(--clay);font-weight:600;transition:transform .2s ease}
+  .link-card:hover .lc-arrow{transform:translateX(4px)}
+   .link-card.coming-soon{opacity:.62;cursor:default}
+   .link-card.coming-soon:hover{border-color:var(--line-sage);background:var(--surface)}
+   .link-card.coming-soon:active{transform:none}
+   .lc-tag{margin-left:auto;flex:none;font-size:.85rem;color:var(--ink-soft);white-space:nowrap}
+  @media (prefers-reduced-motion: reduce){
+    .link-card,.link-card .lc-arrow{transition:none}
+    .link-card:active{transform:none}
+    .link-card:hover .lc-arrow{transform:none}
+  }
+
   @media print{
-    .nav,.hero-ctas,.sticky-cta{display:none !important}
+    .nav,.hero-ctas,.sticky-cta,.link-cards{display:none !important}
     body{background:#fff;color:#000;font-size:12pt}
     .section,.hero{padding:18px 0}
     details.mistake{break-inside:avoid}
@@ -465,7 +524,7 @@
 <header class="nav">
   <div class="top-bar">
     <div class="wrap top-bar-in">
-      <a href="tel:+61411676138"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.25a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.9z"/></svg>Call or message 0411 676 138</a>
+      <a href="tel:+61411676138"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.25a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.9z"/></svg>Call or message +61 411 676 138</a>
       <a href="mailto:mishtisaxena7@gmail.com"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>mishtisaxena7@gmail.com</a>
     </div>
   </div>
@@ -479,6 +538,7 @@
       <a href="#services" data-nav="services">Services</a>
       <a href="#about" data-nav="about">About</a>
       <a href="#book" data-nav="book">Book</a>
+      <a href="#links" data-nav="links">Links</a>
     </nav>
     <div class="nav-cta"><a class="btn small" href="#book">Book a free chat</a></div>
     <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu">Menu</button>
@@ -491,6 +551,7 @@
     <a href="#services" data-nav="services">Services</a>
     <a href="#about" data-nav="about">About</a>
     <a href="#book" data-nav="book">Book</a>
+    <a href="#links" data-nav="links">Links</a>
     <a href="#book" class="mm-cta">Book a free chat</a>
   </nav>
 </header>
@@ -982,7 +1043,7 @@
         <p>Tell me where the land is and what you're thinking of doing, and I will reply to arrange the chat — or run the check: zoning, height, FSR, minimum lot size and any obvious constraints. No fee, no obligation, no hard sell.</p>
         <div class="contact-lines">
           <a href="mailto:mishtisaxena7@gmail.com"><span class="lbl">Email</span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg> mishtisaxena7@gmail.com</a>
-          <a href="tel:+61411676138"><span class="lbl">Phone</span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.25a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.9z"/></svg> 0411 676 138</a>
+          <a href="tel:+61411676138"><span class="lbl">Phone</span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.25a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.9z"/></svg> +61 411 676 138</a>
           <a href="https://landsp.com.au" target="_blank" rel="noopener"><span class="lbl">Work</span> Land Specialists — landsp.com.au</a>
           <a href="https://www.linkedin.com/in/mishti-saxena-1a157a223" target="_blank" rel="noopener"><span class="lbl">LinkedIn</span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg> Mishti Saxena on LinkedIn</a>
         </div>
@@ -991,6 +1052,7 @@
 
       <form class="book" id="bookForm" novalidate>
         <input type="hidden" name="access_key" value="35feca9f-a4eb-4497-926a-ff240bed45cb" />
+        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" aria-hidden="true" />
         <input type="hidden" name="subject" id="fSubject" value="Free 20–30 min chat request" />
         <input type="hidden" name="from_name" value="Mishti Saxena landing page" />
         <input type="hidden" name="request_type" id="fIntent" value="Free 20–30 min chat" />
@@ -1027,6 +1089,64 @@
       </form>
     </div>
   </section>
+
+  <!-- 9 · LINKS -->
+  <section class="section sageband" id="links">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="sec-num">07 — Links</p>
+        <h2>All the links, in one place</h2>
+        <p class="sub">The free offers, the guide, my profiles and the ways to reach me — everything on this page, gathered here so you don't have to go looking for it.</p>
+      </div>
+      <div class="link-cards">
+        <a class="link-card" href="#book" data-intent-link="chat">
+          <span class="lc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></span>
+          <span class="lc-txt"><span class="lc-title">Book a free chat</span><span class="lc-desc">A free 20–30 minute call about your land and your idea.</span></span>
+          <span class="lc-arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="link-card" href="#book" data-intent-link="zoning">
+          <span class="lc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></span>
+          <span class="lc-txt"><span class="lc-title">Get a free Quick Zoning Check</span><span class="lc-desc">Zoning, height, FSR, minimum lot size and constraints for your address.</span></span>
+          <span class="lc-arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="link-card" href="7-costly-mistakes-guide.pdf" download="7-costly-mistakes-guide.pdf" download>
+          <span class="lc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span>
+          <span class="lc-txt"><span class="lc-title">Download the free guide (PDF)</span><span class="lc-desc">7 costly mistakes landowners make — and what to do instead.</span></span>
+          <span class="lc-arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="link-card" href="https://www.linkedin.com/in/mishti-saxena-1a157a223" target="_blank" rel="noopener">
+          <span class="lc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></span>
+          <span class="lc-txt"><span class="lc-title">Mishti Saxena on LinkedIn</span><span class="lc-desc">Connect with me and follow the work.</span></span>
+          <span class="lc-arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="link-card" href="https://landsp.com.au" target="_blank" rel="noopener">
+          <span class="lc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M2 22h20"/><path d="M10 6h1M13 6h1M10 10h1M13 10h1M10 14h1M13 14h1"/></svg></span>
+          <span class="lc-txt"><span class="lc-title">Land Specialists</span><span class="lc-desc">Where I work day to day — landsp.com.au.</span></span>
+          <span class="lc-arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="link-card" href="tel:+61411676138">
+          <span class="lc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.25a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.9z"/></svg></span>
+          <span class="lc-txt"><span class="lc-title">Call or message me</span><span class="lc-desc">+61 411 676 138</span></span>
+          <span class="lc-arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="link-card" href="mailto:mishtisaxena7@gmail.com">
+          <span class="lc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
+          <span class="lc-txt"><span class="lc-title">Email me</span><span class="lc-desc">mishtisaxena7@gmail.com</span></span>
+          <span class="lc-arrow" aria-hidden="true">→</span>
+        </a>
+        <div class="link-card coming-soon">
+          <span class="lc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg></span>
+          <span class="lc-txt"><span class="lc-title">Instagram</span><span class="lc-desc">Photos and short explainers — coming soon</span></span>
+          <span class="lc-tag">Coming soon</span>
+        </div>
+        <div class="link-card coming-soon">
+          <span class="lc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
+          <span class="lc-txt"><span class="lc-title">Book a time</span><span class="lc-desc">Online booking — coming soon</span></span>
+          <span class="lc-tag">Coming soon</span>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
 
 <footer>
@@ -1040,7 +1160,7 @@
         <h3>Get in touch</h3>
         <div class="foot-links" style="margin-top:8px">
           <a href="mailto:mishtisaxena7@gmail.com"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>&nbsp;mishtisaxena7@gmail.com</a>
-          <a href="tel:+61411676138"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.25a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.9z"/></svg>&nbsp;0411 676 138</a>
+          <a href="tel:+61411676138"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.25a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.9z"/></svg>&nbsp;+61 411 676 138</a>
           <a href="https://landsp.com.au" target="_blank" rel="noopener">Landsp.com.au</a>
           <a href="https://www.linkedin.com/in/mishti-saxena-1a157a223" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>&nbsp;LinkedIn</a>
         </div>
@@ -1125,7 +1245,7 @@
 
   // Nav scrollspy: highlight the section currently in view, in both menus.
   var navLinks = Array.prototype.slice.call(document.querySelectorAll('[data-nav]'));
-  var spySections = ['free-check','work','how','mistakes','services','about','book']
+  var spySections = ['free-check','work','how','mistakes','services','about','book','links']
     .map(function(id){ return document.getElementById(id); })
     .filter(Boolean);
   if ('IntersectionObserver' in window && navLinks.length && spySections.length) {
@@ -1185,7 +1305,7 @@
   function sendFailed(){
     submitBtn.disabled = false;
     setIntent(intent);
-    showStatus('Sorry — your message could not be sent just now. Please call or message me on 0411 676 138, or email mishtisaxena7@gmail.com, and I will help you from there.', false);
+    showStatus('Sorry — your message could not be sent just now. Please call or message me on +61 411 676 138, or email mishtisaxena7@gmail.com, and I will help you from there.', false);
   }
   form.addEventListener('submit', function(e){
     e.preventDefault();
@@ -1213,7 +1333,7 @@
           form.reset();
           submitBtn.disabled = false;
           setIntent(intent);
-          showStatus('Thank you. I have your details and I will reply within one working day to arrange your free chat or run your zoning check. If it is urgent, call or message 0411 676 138.', true);
+          showStatus('Thank you. I have your details and I will reply within one working day to arrange your free chat or run your zoning check. If it is urgent, call or message +61 411 676 138.', true);
         } else {
           sendFailed();
         }
