@@ -174,7 +174,6 @@
   .hero h1{font-size:clamp(2.3rem,5.2vw,3.6rem);font-weight:700;letter-spacing:-.01em}
   .hero .lede{margin-top:20px;font-size:1.13rem;color:var(--ink-soft);max-width:34rem}
   .hero-ctas{margin-top:28px;display:flex;flex-wrap:wrap;gap:14px;align-items:center}
-  .hero-trust{margin-top:22px;font-size:.95rem;font-weight:600;color:var(--ink);max-width:34rem}
   .hero-guide-link{margin-top:12px;font-size:.95rem}
 
   /* Hero portrait — beside the headline; the sample check card sits below the hero grid */
@@ -183,6 +182,21 @@
   .hero-photo img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:top;
     border-radius:var(--radius);border:1px solid var(--line-sage);box-shadow:var(--shadow)}
   .hero-photo figcaption{margin-top:8px;font-size:.88rem;font-weight:600;color:var(--ink-soft)}
+  .hero-photo figcaption .cap-sub{display:block;font-weight:500}
+
+  /* Mobile hero order: headline, photo + identity, lede, buttons, chips, guide link.
+     Desktop keeps the two-column grid untouched. */
+  @media(max-width:919px){
+    .hero-grid{gap:24px}
+    .hero-main,.hero-side{display:contents}
+    .hero h1{order:1}
+    .hero-photo{order:2}
+    .hero .lede{order:3;margin-top:0}
+    .hero-ctas{order:4;margin-top:0}
+    .hero-highlights{order:5;margin-top:0}
+    .hero-guide-link{order:6;margin-top:0}
+    .hero-photo img{aspect-ratio:4/3}
+  }
 
   /* Sample zoning check card */
   .sample-card{background:var(--surface);border:1px solid var(--line-sage);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
@@ -490,7 +504,11 @@
     border-radius:var(--radius);padding:16px 20px;text-decoration:none;color:var(--ink);box-shadow:var(--shadow);
     transition:border-color .2s ease,background .2s ease,transform .15s ease}
   .link-card:hover{border-color:var(--clay-bright);background:var(--clay-soft)}
-  .link-card:active{transform:scale(.99)}.link-card.coming-soon{opacity:.62;cursor:default}.link-card.coming-soon:hover,.link-card.coming-soon:active{transform:none;box-shadow:none}
+  .link-card:active{transform:scale(.99)}
+  .link-card.coming-soon{opacity:.62;cursor:default}
+  .link-card.coming-soon:hover{border-color:var(--line-sage);background:var(--surface)}
+  .link-card.coming-soon:active{transform:none}
+  .link-card .lc-tag{margin-left:auto;flex:none;font-size:.82rem;font-weight:600;color:var(--ink-soft)}
   .link-card .lc-ic{display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;flex:none;border-radius:50%;
     background:var(--sage-soft);border:1.5px solid var(--line-sage);color:var(--green)}
   .link-card .lc-ic svg{width:24px;height:24px}
@@ -558,7 +576,7 @@
   <!-- 1 · HERO -->
   <div class="hero">
     <div class="wrap hero-grid">
-      <div>
+      <div class="hero-main">
         <h1>What can your land really become?</h1>
         <p class="lede">You own land in NSW and have an idea: a subdivision, a dual occupancy, townhouses, or something bigger. Before you spend on designers and consultants, I will give you an honest first take: what your zoning allows, what could hold the site back, and what to do next.</p>
         <div class="hero-ctas">
@@ -571,13 +589,12 @@
           <span>Sydney, Central Coast &amp; Hunter</span>
           <span>No fee for the first chat or check</span>
         </div>
-        <p class="hero-trust">Urban Designer, Sydney · Master of Urbanism (Urban Design)</p>
         <p class="hero-guide-link"><a class="link-arrow" href="7-costly-mistakes-guide.pdf" download="7-costly-mistakes-guide.pdf" download>Download the free guide: 7 costly mistakes landowners make (PDF) →</a></p>
       </div>
       <div class="hero-side">
         <figure class="hero-photo">
           <img src="mishti-portrait-hero-sq.jpg" alt="Mishti Saxena, urban designer in Sydney" />
-          <figcaption>Mishti Saxena — Urban Designer, Sydney</figcaption>
+          <figcaption>Mishti Saxena — Urban Designer, Sydney<span class="cap-sub">Master of Urbanism (Urban Design)</span></figcaption>
         </figure>
       </div>
     </div>
@@ -1138,16 +1155,15 @@
           <span class="lc-arrow" aria-hidden="true">→</span>
         </a>
         <div class="link-card coming-soon">
-          <span class="lc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span>
+          <span class="lc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></span>
           <span class="lc-txt"><span class="lc-title">Instagram</span><span class="lc-desc">Photos and short explainers — coming soon</span></span>
           <span class="lc-tag">Coming soon</span>
         </div>
         <div class="link-card coming-soon">
-          <span class="lc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
+          <span class="lc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span>
           <span class="lc-txt"><span class="lc-title">Book a time</span><span class="lc-desc">Online booking — coming soon</span></span>
           <span class="lc-tag">Coming soon</span>
         </div>
-
       </div>
     </div>
   </section>
